@@ -1,0 +1,58 @@
+{% extends "base.html" %} {% load static %}
+
+{% block titulo %}
+FindMarket - Contato
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/contato.css' %}">
+{% endblock %}
+
+{% block content %}
+
+{% include 'navprincipal.html' %}
+
+    <div class="container">
+        <div class="form">
+            <form action="https://formsubmit.co/dbentooojj@gmail.com" method="POST">
+                <h1>Contato</h1>
+                <div class="input">
+                    <input type="text" placeholder="Nome" autocomplete="off" required>
+                </div>
+                <div class="input">
+                    <input type="email" placeholder="Email" autocomplete="off" required>
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Assunto" required>
+                </div>
+                <div class="input">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem" required></textarea>
+                    <input type="hidden" name="_captcha" value="false">
+                </div>
+                <div class="input">    
+                    <input type="submit" value="Enviar">
+                </div>
+
+                <input type="hidden" name="accessKey" value="5b75d888-d81d-4a40-b501-a08418a987f1">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/obg.html">
+
+            </form>
+        </div>
+
+        <div class="info">
+            <h1>Informações</h1>
+            <div class="info-item">
+                <h2>Endereço</h2>
+                <p>Santa Catarina, Brasil</p>
+            </div>
+            <div class="info-item">
+                <h2>Telefone</h2>
+                <p>+55 (47) 99761-4659</p>
+            </div>
+            <div class="info-item">
+                <h2>Email</h2>
+                <p>fiindmarkett@gmail.com</p>
+        </div>
+    </div>
+
+{% endblock %}

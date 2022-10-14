@@ -1,0 +1,544 @@
+{% load static %}
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;300;400;500&family=Lato:wght@100;300;400;700;900&display=swap');
+
+body {
+    font-family: 'Lato'
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#sessao1 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/background-full_01.png);
+    background-size: 100% 100%;
+}
+
+#sessao2 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/background-full_02.png);
+    background-size: 100% 100%;
+}
+
+footer span {
+    font-family: "Lato";
+    font-height: 600;
+    font-color: #c1c1c1;
+}
+
+.Tela-01 {
+    margin-left: 8%;
+    margin-top: 6em;
+}
+
+.Titulo_inicial {
+    font-family: 'Lato';
+    font-size: 3.4em;
+    /*max-width: 40%;*/
+    font-weight: 100;
+    color: #fff;
+    letter-spacing: normal;
+    line-height: 90%;
+}
+
+.barra-01 {
+    margin-top: 40px;
+}
+
+#clique_aqui {
+    width: 120px;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    color: #202a45;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Lato';
+    border-radius: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .6s ease;
+    border: 1px solid #fff;
+}
+
+.botao_clique_aqui {
+    width: 90%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+
+#clique_aqui:hover {
+    background-color: #202a45;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 8%;
+    padding-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    color: #fff;
+    font-weight: 400px;
+    text-decoration: none;
+    font-family: 'lato';
+    letter-spacing: normal;
+}
+
+nav ul li a {
+    border-bottom: 3px solid transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+ul {
+    transition: all 0.5s ease-in-out;
+}
+
+#logo {
+    max-width: 65%;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-decoration: column;
+}
+
+.container2 {
+    display: flex;
+    flex-decoration: column;
+    margin-left: 18%;
+}
+
+.lado-a1 {
+    height: 15%;
+    width: 15%;
+    margin-right: 22%;
+    margin-top: 2%;
+}
+
+.lado-a1 img {
+    max-width: 150%;
+    margin-left: 85%;
+    margin-top: 25%;
+}
+
+.lado-a2 {
+    height: 20vh;
+    width: 30vh;
+    margin-right: 22%
+    margin-top: 2%;
+}
+
+.lado-a2 img {
+    max-width: 150%;
+    margin-left: 325%;
+    margin-top: 28%;
+    margin-left: 340%;
+}
+
+.testo2 {
+    margin-left: 5%;
+}
+
+.testo2 h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #fff;
+
+    margin-top: 5%;
+    text-align: right
+}
+
+.testo2 p {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1em;
+    letter-spacing: -0.01em;
+    font-family: 'Lato';
+    text-align: right;
+    margin-top: 6%
+}
+
+.forma001 {
+    color: #7a8ea7;
+}
+
+.forma002 {
+    margin-left: 58.5%;
+    max-width: 40%;
+}
+
+.testo h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #202a45;
+}
+
+.testo {
+    margin-top: 5%;
+    margin-left: 6%;
+}
+
+.testo p {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #202a45;
+    line-height: 1em;
+    margin: 20px 0;
+    letter-spacing: -0.01em;
+    font-family: 'Lato';
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+footer {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background: #142644;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-content .box {
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.box h2 {
+    font-family: "Lato";
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.box .content {
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+.box .content:after {
+    position: absolute;
+    content: '';
+    width: 15%;
+    height: 2px;
+    background: #fff;
+    top: -10px;
+}
+
+.box .content:before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #142644;
+    top: -10px;
+}
+
+.left .content .social {
+    margin: 20px 0 0 0;
+}
+
+.left .content .social a {
+    font-family: "Lato";
+    padding: 0 10px;
+}
+
+.left .content .social a span {
+    width: 40px;
+    height: 40px;
+    background: #202a45;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+
+}
+
+.left .content .social a span:hover {
+    background: #fff;
+}
+
+.left .content p {
+    font-family: "Lato";
+    text-align: justify;
+    color: #fff;
+}
+
+.center .content .fas {
+    font-size: 23px;
+    background: #202a45;
+    width: 45px;
+    height: 45px;
+    font-family: "Lato";
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.center.content.fas:hover {
+    background: #fff;
+}
+
+.center .content .text {
+    font-family: "Lato";
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 10px;
+    color: #fff
+}
+
+.center .content .phone {
+    margin: 10px 0;
+}
+
+.center .content .msg {
+    margin-top: 10px;
+}
+
+.right form input, .right form textarea {
+    width: 100%;
+    font-size: 12px;
+    font-family: "Lato";
+    background: #142644;
+    border: 1px solid #303f69;
+    outline: none;
+    color: #fff;
+}
+
+textarea {
+    min-height: 3rem;
+    resize: vertical;
+}
+
+.right form input {
+    height: 35px;
+}
+
+.right form input:focus,
+.right form textarea:focus {
+    outline-color: #fff;
+}
+
+.right form .text {
+    font-size: 17px;
+    margin-bottom: 2px;
+    color: #395486;
+    font-family: "Lato";
+}
+
+.right form .btn {
+    margin-top: 10px;
+}
+
+.right form .btn button {
+    height: 40px;
+    width: 100%;
+    background: #fff;
+    font-size: 17px;
+    font-family: "Lato";
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+    border: none;
+}
+
+.right form .btn button:hover {
+    background: #142644;
+    border: 1px solid #303f69;
+    color: #fff;
+}
+
+.bottom .center {
+    padding: 5px;
+    font-size: 12px;
+    background: #142644;
+    text-align: center;
+}
+
+.bottom .center span {
+    color: #354f7c;
+}
+
+.button_scroll {
+    background: transparent;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_scroll {
+    max-width: 45%;
+    color: #fff;
+}
+
+.botaoscroll {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    background: none;
+    border: 2px solid #202a45;
+    border-radius: 30px;
+    margin-left: 48.4%;
+    margin-top: 150px;
+}
+
+#scroll:hover {
+    background-color: #fff;
+    color: #202a45;
+    border: 1px solid #202a45;
+}
+
+@media screen and (min-width:601px) {
+    root {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    root {
+        font-size: 12px;
+    }
+
+    .Titulo_inicial {
+        font-size: 40px;
+        font-weight: 200;
+        /*margin-left: 50px;
+        margin-top: 50px;*/
+    }
+
+    #clique_aqui {
+        /*width: 70%;
+        height: 30px;
+        background-color: #fff;
+        border: none;
+        color: #202a45;
+        font-size: 15px;
+        font-weight: 800;
+        font-family: 'Lato';
+        border-radius: 20px;
+        padding: 0px;
+        cursor: pointer;
+        transition: .6s ease;
+        border: 1px solid #fff;*/
+    }
+
+    #logo {
+        /*margin-left: 0px;
+        max-width: 100%;*/
+    }
+
+    .list {
+        margin-left: 0px;
+        gap: 0px;
+    }
+
+    .navbar {
+        margin-left: 0px;
+        flex-wrap: nowrap;
+
+    }
+
+    .list a {
+        margin-left: 20px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0px;
+        font-size: 15px;
+    }
+
+
+
+    .container {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .testo h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #202a45;
+    }
+
+    .lado-a1 img {
+        display: none;
+    }
+
+    .testo {
+        margin-top: 25%;
+    }
+
+    .testo p {
+        font-size: 25px;
+        font-weight: 600;
+        color: #202a45;
+        line-height: 1em;
+        margin: 20px 0;
+        letter-spacing: -0.01em;
+        font-family: 'Lato';
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding-top: 20px;
+    }
+
+    #sessao1 {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #sessao2 {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+
+

@@ -1,0 +1,251 @@
+{% load static %}
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;300;400;500&family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(../images/TeladeCadastro/Background_cadastro.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.containera {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 12%;
+}
+
+.cor-z {
+    width: 40%;
+    height: 100%;
+    background-color: #202a45;
+}
+
+.lado-a {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 400px;
+}
+
+.lado-b {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lado-a h1 {
+    color: #202a45;
+    font-size: 43px;
+    margin-bottom: 20px;
+    font-family: 'Lato';
+    margin-left: 20px;
+
+}
+
+.lado-a p {
+    color: #202a45;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Lato';
+    margin-bottom: 30px;
+}
+
+lado-a img {
+    align-items: center;
+}
+
+
+.lado-b h1 {
+    color: #fff;
+    font-size: 70px;
+    margin-bottom: 20px;
+    font-family: 'Lato';
+}
+
+.ico input {
+    outline: none;
+    width: 100%;
+    height: 40px;
+    padding: 0 0 0 45px;
+    margin-bottom: 20px;
+    background-color: #ececec;
+    border: none;
+
+}
+
+input:focus {
+    border: 0.5px solid #202a45;
+}
+
+input::placeholder {
+    color: #202a45;
+    font-size: 20px;
+    font-family: 'Lato';
+    opacity: .5;
+}
+
+input:focus::placeholder {
+    opacity: 1;
+}
+
+.icoo {
+    position: relative;
+}
+
+label {
+    position: absolute;
+}
+
+label img {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+
+
+.check label {
+    font-size: 21px;
+    margin: 0 0 0 5px;
+    font-family: 'Lato';
+}
+
+.check input {
+    width: 21px;
+    height: 21px;
+    border: #202a45 1px solid;
+}
+
+
+.btn-entra2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn_cadastro {
+    width: 70%;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    color: #202a45;
+    font-size: 20px;
+    font-family: 'Lato';
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .6s ease;
+}
+
+#btn_cadastro:hover {
+    background-color: #202a45;;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.btn-entra1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn_login {
+    width: 70%;
+    height: 40px;
+    background-color: #202a45;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Lato';
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .6s ease;
+}
+
+#btn_login:hover {
+    background-color: #fff;
+    color: #202a45;
+    border: 1px solid #202a45;
+}
+
+.logo-b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 150px;
+}
+
+.logo-b img {
+    width: 100px;
+    height: 100px;
+}
+
+form{
+    width: 100%;
+    max-width: 350px;
+    padding: 2%;
+    position: relative;
+}
+
+.single-input{
+    position: relative;
+    margin: 30px 0;
+    font-family: "Lato";
+}
+.single-input label{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    color: #fff;
+    cursor: text;
+    transition: 0.5s ease-in-out;
+}
+
+.input{
+    width: 100%;
+    padding: 5px;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    outline: 0;
+    font-size: 16px;
+    transition: 0.5s ease-in-out;
+    background-color: #142644;
+}
+
+.input:focus,
+.input:valid{
+    border-bottom: 2px solid #fff;
+}
+.input:focus ~ label,
+.input:valid ~ label{
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: #fff;
+}

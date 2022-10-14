@@ -1,0 +1,121 @@
+{% extends "base.html" %} {% load static %}
+
+{% block titulo %}
+FindMarket - Seu amigo todos os dias
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+    <section id="sessao1">
+        {% include 'navbar.html' %}
+        <div class="Tela-01">
+            <h1 class="Titulo_inicial">Procurando <br>o melhor preço<br> de algum produto<br> na sua região?
+            </h1>
+            <img class="barra-01" src="{% static 'images/form.png' %}" alt="barra">
+            <div class="bottom">
+                <a class="card" href="#"></a>
+            </div>
+            <div class="botao_clique_aqui">
+                <a href="/principal">
+                <input type="submit" value="Clique aqui" id="clique_aqui">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sessao2">
+        <div class="container">
+            <div class="lado-a1">
+                <img src="{% static 'images/COLORIDA_ABAIXO_1000X1000.png' %}">
+            </div>
+
+            <div class="testo">
+                <div>
+                    <h1>
+                        Find Market?
+                    </h1>
+                </div>
+                <div>
+                    <img class="forma001" src="{% static 'images/form1.png' %}">
+                </div>
+                <div>
+                    <p>
+                        Este projeto, foi criado<br>
+                        com o objetivo de ajudar<br>
+                        pessoas a buscarem<br>
+                        os melhores preços<br>
+                        dos produtos na<br>
+                        sua região, ajudando<br>
+                        assim, a vida de todos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h2>Siga nossas redes sociais</h2>
+                <div class="content">
+                    <p>Acompanhe e confira todo nosso trabalho e desenvolvimento deste projeto</p>
+
+                    <div class="social">
+                        <a href="#"><img src="{% static 'images/rodapé/linkedin_logo.png' %}"></a>
+                        <a href="#"><img src="{% static 'images/rodapé/instagram_logo.png' %}"></a>
+                        <a href="#"><img src="{% static 'images/rodapé/youtube_logo.png' %}"></a>
+                    </div>
+                </div>
+            </div><!--left-box-->
+            <div class="center box">
+                <h2>Endereço</h2>
+                <div class="content">
+                    <div class="place">
+                        <img src="{% static 'images/rodapé/localização_logo.png' %}">
+                        <span class="text">Santa Catarina, Brasil</span>
+                    </div>
+
+                    <div class="phone">
+                        <img src="{% static 'images/rodapé/celular_logo.png' %}">
+                        <span class="text">+55 47 99761-4659</span>
+                    </div>
+
+                    <div class="email">
+                        <img src="{% static 'images/rodapé/email_logo.png' %}">
+                        <span class="text">fiindmarkett@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h2>Contato</h2>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text">Mensagem *</div>
+                            <textarea rows="2" cols="25" required></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!--main-content-->
+        <div class="bottom">
+            <div class="center">
+                <span class="credit">©2022 Todos os direitos reservados</span>
+            </div>
+        </div>
+    </footer>
+
+{% endblock %}
