@@ -470,7 +470,7 @@ h1 {
     justify-content: center;
     align-items: center;
 
-    margin-top: 80px;
+    margin-top: 6rem;
 }
 
 .menuFilter {
@@ -749,6 +749,10 @@ root {
 }
 
 @media screen and (min-width: 601px) {
+    root {
+        font-size: 18px;
+    }
+    
     .container1 {
         background-color: #fff;
         margin: 20px;
