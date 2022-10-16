@@ -29,11 +29,12 @@ a:hover {
 
 .logo {
     height: 40px;
-    width: 40px;
+    width: 5em;
+    margin-top: 0.5em;
 }
 
 .logo_img {
-    max-width: 40%;
+    max-width: 100%;
 }
 
 nav {
@@ -53,7 +54,6 @@ nav {
 .nav-list li {
     letter-spacing: 3px;
     margin-left: 32px;
-    margin-top: 22px;
 }
 
 .link {
@@ -61,7 +61,7 @@ nav {
     color: #fff;
     list-style: none;
     display: flex;
-    margin-top: 29px;
+    margin-top: 1.1em;
 }
 
 .botaoPesquisar {
@@ -488,6 +488,10 @@ h1 {
     font-size: 30px;
 }
 
+.py-5 {
+    padding-top: 1rem!important;
+    padding-bottom: 3rem!important;
+}
 
 
 .container1 {
@@ -500,9 +504,6 @@ h1 {
     padding: 4px;
 }
 
-.haha2 {
-    margin-top: 28px;
-}
 
 .form-check {
     display: flex;
@@ -669,9 +670,10 @@ root {
     }
 
     .lista-pro ul {            
-        margin: 0px ;
+        margin-top: 2.4em ;
         padding-left: 0px ;
-        
+        align-items: center;
+        justify-content: space-around;
     }   
 
     .lista-pro ul a {            
@@ -688,6 +690,26 @@ root {
     .lista-pro ol {            
         margin: 0px ;
         padding-left: 0px ;
-    }         
+    }       
+    
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Lato';
+        background: #202a45;
+        height: 8vh;
+        height: 120px;
+    }
 
+    .logo {
+        height: 3em;
+        width: 6em;
+        margin-bottom: 50px;
+    }
+    
+    .logo_img {
+        max-width: 100%;
+        margin-top: 4px;
+    }
 }
