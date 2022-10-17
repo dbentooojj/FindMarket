@@ -21,6 +21,12 @@
                     {% include 'sidebar.html' %}
                 </div>
             </div>
+
+            <form method="get">
+                {{ meu_filtro.form.as_p }}
+                <button class="botaoPesquisar" type="submit">Pesquisar</button>
+            </form>
+
         </nav>
 
 
