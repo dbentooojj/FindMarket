@@ -1,10 +1,8 @@
-from asyncio.windows_events import NULL
+
 from django.shortcuts import render
 from .models import Produtos
 from django.core.paginator import Paginator
 from .filters import ProductFilter
-from django.db.models import Q
-from itertools import chain
 
 
 
