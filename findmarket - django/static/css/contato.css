@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;300;400;500&family=Lato:wght@100;300;400;700;900&display=swap');
 
+
 * {
     margin: 0px;
     padding: 0px;
@@ -10,104 +11,230 @@
 
 body {
     font-family: 'Lato';
-    background-color: #f1f1f1;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #ececec;
-}
-
-.form {
-    width: 600px;
-    height: 600px;
-    background-color: #202a45;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-    margin-right: 100px;
-}
-
-.form h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.form .input {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-.form .input label {
-    margin-bottom: 5px;
-}
-
-.form .input input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-}
-
-.input textarea {
-    resize: none;
-    height: 220px;
-    outline: none;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.input input[type="submit"] {
     background-color: #fff;
-    color: #202a45;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
 }
 
-.input input[type="submit"]:hover {
-    background-color: #202a45;
-    color: #fff;
-    border-radius: 10px;
+@media screen and (min-width: 601px) {
+    root {
+        font-size: 18px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Lato';
+        background: #202a45;
+        height: 9vh;
+    }
+
+    .logo_img {
+        position: fixed;
+        margin-top: 8.2rem;
+        margin-left: 4rem;
+        left: 0;
+        height: 2rem;
+        max-width: 80%;
+        transition: .3s;
+    }
+
+    .logo_img:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+
+    .ladoEsquerdo {
+        height: 10rem;
+        width: 27rem;
+    }
+
+    .nav-list {
+        list-style: none;
+        display: flex;
+        margin-top: 8.5rem;
+        margin-left: 35rem;
+    }
+    
+    .nav-list li {
+        letter-spacing: 3px;
+        margin-left: 3rem;
+    }
+
+    .barraPesquisa {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        margin-top: 1.2rem;
+        margin-left: 34rem;
+        top: 0;
+    }
+
+    .barraPesquisa input {
+        font-size: 0.9rem;
+        padding-left: 0.5rem;
+    }
+
+    .botaoPesquisar {
+        display: none;
+    }
+
+    .link {
+        text-decoration: none;
+        color: #fff;
+        list-style: none;
+        display: flex;
+        transition: .3s;
+    }
+
+    .link:hover {
+        opacity: 0.5;
+    }
+    
+    .tituloModal {
+        display: none;
+    }
+
+    #open-modal {
+        display: none;
+    }
+
+    #close-modal {
+        display: none;
+    }
+    
+    .containerContato {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #fff;
+        margin-top: 2rem;
+        margin-left: 12rem;
+        margin-bottom: 3rem;
+        padding: 2rem;
+    }
+    
+    .form {
+        position: relative;
+        width: 25rem;
+        height: 30rem;
+        background-color: #202a45;
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        margin-right: 100px;
+    }
+    
+    .form h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 0.8rem;
+        color: #fff;
+    }
+    
+    .form .input {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    
+    .form .input label {
+        margin-bottom: 5px;
+    }
+    
+    .form .input input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+    }
+    
+    .input textarea {
+        font-family: 'Lato';
+        resize: none;
+        height: 10.3rem;
+        outline: none;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .input input[type="submit"] {
+        background-color: #fff;
+        color: #202a45;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .input input[type="submit"]:hover {
+        background-color: #202a45;
+        color: #fff;
+        border-radius: 10px;
+    }
+    
+    .info h1 {
+        display: flex;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #202a45;
+        font-weight: 900;
+        font-size: 55px;
+    }
+    
+    .info h2 {
+        color: #202a45;;
+        font-weight: 900;
+        font-size: 35px;
+    }
+    
+    .info p {
+        color: #000000;
+        font-weight: 300;
+        font-size: 25px;
+    }
+    
+    .info .input {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    
+    .info-item {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .modal-body {
+        display: none;
+    }
+    
+    .navbar001 {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 10;
+    }
 }
 
-.info h1 {
-    display: flex;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #202a45;
-    font-weight: 900;
-    font-size: 55px;
+@media screen and (max-width: 600px) {
+    root {
+        font-size: 12px;
+    }    
+
+
 }
 
-.info h2 {
-    color: #202a45;;
-    font-weight: 900;
-    font-size: 35px;
-}
 
-.info p {
-    color: #000000;
-    font-weight: 300;
-    font-size: 25px;
-}
 
-.info .input {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
 
-.info-item {
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
+
+
+
+
+
