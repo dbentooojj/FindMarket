@@ -768,7 +768,7 @@ root {
         height: 4rem;
     }
 
-    .container {
+    .tudo {
         margin-top: 8rem;
     }
 
@@ -783,7 +783,7 @@ root {
         font-size: 18px;
     }
     
-    .container1 {
+    .containerA1 {
         background-color: #fff;
         margin: 20px;
         width: 250px;
@@ -791,6 +791,7 @@ root {
         border-radius: 8px;
         margin-top: 20px;
         padding: 4px;
+        z-index: 12;
     }
     
     
@@ -873,7 +874,7 @@ root {
         border: 1px solid #fff;
     }
 
-    form {
+    .barraPesquisa {
         display: flex;
         position: absolute;
         align-items: center;
