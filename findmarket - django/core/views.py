@@ -44,7 +44,7 @@ def mergeDictionary(dict_1, dict_2):
 
 mercados = []
 
-def principal(request, mercados):
+def principal(request):
     if len(mercados) == 0:
         mercados_list = ['Fort Atacadista','Sams']
     else:
