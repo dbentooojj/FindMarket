@@ -1,12 +1,13 @@
 # criando as paginas do site (urls - views(o que vai acontecer) - templates(visual do site)))
 
 from django.urls import path, include
-from .views import homepage, login, cadastro, endereco, principal, feijao, arroz, macarrao, sal, molho_tomate, farinha_trigo, cafe, detergente, contato
+from .views import homepage, login, cadastro, endereco, principal, feijao, arroz, macarrao, sal, molho_tomate, farinha_trigo, cafe, detergente, contato, market_forms
 
 urlpatterns = [
     path('', homepage, name='homepage'),
     path('login/', login, name='login'),
     path('cadastro/', cadastro, name='cadastro'),
+    path('TesteForms', market_forms, name='market_forms'),
     path('endereco/', endereco, name='endereco'),
     path('principal/', principal, name='principal'),
     path('feijao/', feijao, name='feijao'),
