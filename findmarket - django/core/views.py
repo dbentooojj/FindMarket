@@ -55,12 +55,13 @@ def feijao(request):
     else:
         mercados_list = mercados
     produtos_list = verifyMarket(mercados_list)
-    produtos_list = produtos_list.filter(categoria='feijao')
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, 'principal.html', {'produtos': produtos})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 
 def arroz(request):
@@ -71,12 +72,13 @@ def arroz(request):
     else:
         mercados_list = mercados
     produtos_list = verifyMarket(mercados_list)
-    produtos_list = produtos_list.filter(categoria='arroz')
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, 'principal.html', {'produtos': produtos})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 
 def macarrao(request):
@@ -87,12 +89,13 @@ def macarrao(request):
     else:
         mercados_list = mercados
     produtos_list = verifyMarket(mercados_list)
-    produtos_list = produtos_list.filter(categoria='macarrao')
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, 'principal.html', {'produtos': produtos})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 
 def sal(request):
@@ -103,21 +106,31 @@ def sal(request):
     else:
         mercados_list = mercados
     produtos_list = verifyMarket(mercados_list)
-    produtos_list = produtos_list.filter(categoria='sal')
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, 'principal.html', {'produtos': produtos})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 
 def molho_tomate(request):
-    produtos_list = Produtos.objects.all().filter(categoria='molho de tomate')
+    mercados = []
+    mercados_list = []
+    if len(mercados) == 0:
+        mercados_list = ['Fort Atacadista','Sams']
+    else:
+        mercados_list = mercados
+    produtos_list = verifyMarket(mercados_list)
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, 'principal.html', {'produtos': produtos})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+
 
 
 def farinha_trigo(request):
@@ -128,12 +141,13 @@ def farinha_trigo(request):
     else:
         mercados_list = mercados
     produtos_list = verifyMarket(mercados_list)
-    produtos_list = produtos_list.filter(categoria='farinha')
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, 'principal.html', {'produtos': produtos})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def cafe(request):
     mercados = []
@@ -143,12 +157,13 @@ def cafe(request):
     else:
         mercados_list = mercados
     produtos_list = verifyMarket(mercados_list)
-    produtos_list = produtos_list.filter(categoria='cafe')
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, 'principal.html', {'produtos': produtos})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def detergente(request):
     mercados = []
@@ -158,12 +173,13 @@ def detergente(request):
     else:
         mercados_list = mercados
     produtos_list = verifyMarket(mercados_list)
-    produtos_list = produtos_list.filter(categoria='detergente')
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, 'principal.html', {'produtos': produtos})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def contato(request):
     return render(request, 'contato.html')
