@@ -1,3 +1,4 @@
+from unicodedata import category
 from django.shortcuts import render
 from django.shortcuts import render
 from .models import Produtos
@@ -55,6 +56,7 @@ def feijao(request):
     else:
         mercados_list = mercados
     produtos_list = verifyMarket(mercados_list)
+    mercados_list = Produtos.objects.all().filter(type="feijao")
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
