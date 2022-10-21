@@ -30,3 +30,7 @@ Serviços usados:
 * Route 53 - Gerenciamento de DNS<br>
 * RDS - Instância de banco de dados (MySql)<br>
 * AWS Certificate Manager - proteção e segurança ao site
+
+Confira o exemplo abaixo de Auto Scaling: </p>
+![2022-10-21 01-57-57 (1) (1)](https://user-images.githubusercontent.com/100057646/197120854-c243fa63-832e-46b1-9549-201f8683123d.gif)
+
