@@ -20,7 +20,7 @@
 Confira o exemplo abaixo: </p>
 ![2022-10-14 23-12-53](https://user-images.githubusercontent.com/100057646/195964521-0c25d90f-b474-4942-b3f8-87e410db2e12.gif)
 
-* Deploy do site feito na AWS <a href="https://docs.aws.amazon.com/index.html?nc2=h_ql_doc_do"><img src="https://www.svgrepo.com/show/331300/aws.svg" width="35" alt="AWS"/></a>
+* Deploy do site feito na AWS <a href="https://docs.aws.amazon.com/index.html?nc2=h_ql_doc_do"><img src="https://www.svgrepo.com/show/331300/aws.svg" width="30" alt="AWS"/></a>
 
 Serviços usados:
 
