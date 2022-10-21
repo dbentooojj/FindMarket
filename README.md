@@ -20,11 +20,11 @@
 Confira o exemplo abaixo: </p>
 ![2022-10-14 23-12-53](https://user-images.githubusercontent.com/100057646/195964521-0c25d90f-b474-4942-b3f8-87e410db2e12.gif)
 
-* Deploy do site feito na AWS <a href="https://docs.aws.amazon.com/index.html?nc2=h_ql_doc_do"><img src="https://www.svgrepo.com/show/331300/aws.svg" width="30" alt="AWS"/></a>
+<h3> Deploy do site feito na AWS</h3>
 
 Serviços usados:
 
-Instância EC2 - Deploy da aplicação<br>
-Route 53 - Gerenciamento de DNS<br>
-RDS - Instância de banco de dados (MySql)<br>
-AWS Certificate Manager - proteção e segurança ao site
+* Instância EC2 - Deploy da aplicação<br>
+* Route 53 - Gerenciamento de DNS<br>
+* RDS - Instância de banco de dados (MySql)<br>
+* AWS Certificate Manager - proteção e segurança ao site
