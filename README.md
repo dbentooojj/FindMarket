@@ -25,6 +25,8 @@ Confira o exemplo abaixo: </p>
 Serviços usados:
 
 * Instância EC2 - Deploy da aplicação<br>
+* load balance - Otimizar o tráfego de informações<br>
+* Auto Scaling - recurso que permite que as organizações aumentem ou diminuam automaticamente serviços em nuvem<br>
 * Route 53 - Gerenciamento de DNS<br>
 * RDS - Instância de banco de dados (MySql)<br>
 * AWS Certificate Manager - proteção e segurança ao site
