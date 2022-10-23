@@ -118,15 +118,6 @@ def principal(request):
 
 def feijao(request):
     produtos_list = Produtos.objects.all().filter(categoria='feijao').order_by('preco_produto')
-    produtos_list = produtos_list
-    mercados = []
-    mercados_list = []
-    if len(mercados) == 0:
-        mercados_list = ['Fort Atacadista','Sams']
-    else:
-        mercados_list = mercados
-    produtos_list = verifyMarket(mercados_list)
-    mercados_list = Produtos.objects.all().filter(type="feijao")
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
@@ -138,13 +129,6 @@ def feijao(request):
 
 def arroz(request):
     produtos_list = Produtos.objects.all().filter(categoria='arroz').order_by('preco_produto')
-    mercados = []
-    mercados_list = []
-    if len(mercados) == 0:
-        mercados_list = ['Fort Atacadista','Sams']
-    else:
-        mercados_list = mercados
-    produtos_list = verifyMarket(mercados_list)
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
@@ -156,13 +140,6 @@ def arroz(request):
 
 def macarrao(request):
     produtos_list = Produtos.objects.all().filter(categoria='macarrao').order_by('preco_produto')
-    mercados = []
-    mercados_list = []
-    if len(mercados) == 0:
-        mercados_list = ['Fort Atacadista','Sams']
-    else:
-        mercados_list = mercados
-    produtos_list = verifyMarket(mercados_list)
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
@@ -174,13 +151,6 @@ def macarrao(request):
 
 def sal(request):
     produtos_list = Produtos.objects.all().filter(categoria='sal').order_by('preco_produto')
-    mercados = []
-    mercados_list = []
-    if len(mercados) == 0:
-        mercados_list = ['Fort Atacadista','Sams']
-    else:
-        mercados_list = mercados
-    produtos_list = verifyMarket(mercados_list)
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
@@ -192,13 +162,6 @@ def sal(request):
 
 def molho_tomate(request):
     produtos_list = Produtos.objects.all().filter(categoria='molho de tomate').order_by('preco_produto')
-    mercados = []
-    mercados_list = []
-    if len(mercados) == 0:
-        mercados_list = ['Fort Atacadista','Sams']
-    else:
-        mercados_list = mercados
-    produtos_list = verifyMarket(mercados_list)
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
@@ -210,15 +173,7 @@ def molho_tomate(request):
 
 
 def farinha_trigo(request):
-    produtos_list = Produtos.objects.all()
     produtos_list = produtos_list.filter(categoria='farinha').order_by('preco_produto')
-    mercados = []
-    mercados_list = []
-    if len(mercados) == 0:
-        mercados_list = ['Fort Atacadista','Sams']
-    else:
-        mercados_list = mercados
-    produtos_list = verifyMarket(mercados_list)
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
@@ -229,13 +184,6 @@ def farinha_trigo(request):
 
 def cafe(request):
     produtos_list = Produtos.objects.all().filter(categoria='cafe').order_by('preco_produto')
-    mercados = []
-    mercados_list = []
-    if len(mercados) == 0:
-        mercados_list = ['Fort Atacadista','Sams']
-    else:
-        mercados_list = mercados
-    produtos_list = verifyMarket(mercados_list)
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
@@ -245,15 +193,7 @@ def cafe(request):
     return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def detergente(request):
-    produtos_list = Produtos.objects.all()
     produtos_list = produtos_list.filter(categoria='detergente').order_by('preco_produto')
-    mercados = []
-    mercados_list = []
-    if len(mercados) == 0:
-        mercados_list = ['Fort Atacadista','Sams']
-    else:
-        mercados_list = mercados
-    produtos_list = verifyMarket(mercados_list)
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
