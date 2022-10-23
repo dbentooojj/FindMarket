@@ -448,7 +448,6 @@ h1 {
     height: 100%;
     padding: 0px;
     background-color: #F8F9FA;
-    margin-top: 10px;
 }
 
 .album py-5 bg-light {
@@ -987,7 +986,7 @@ root {
 }
 
 .btn-menuu {
-    margin-top: 6.5rem!important;
+    margin-top: 4.5rem!important;
     margin-left: 1.5rem;
 }
 
