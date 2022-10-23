@@ -458,6 +458,7 @@ h1 {
     display: flex;
     position: relative;
     margin-bottom: 20px;
+    margin-top: 100px;
 }
 
 .gridtop{
@@ -489,6 +490,22 @@ root {
     padding-left: 8px;
     font-size: 1rem;
     outline: none;
+}
+
+
+.mercados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #142644;
+}
+
+.mercados a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #395486;
+    padding: 0px 20px;
 }
 
 /* @media screen and (min-width: 601px) {
@@ -782,17 +799,7 @@ root {
     root {
         font-size: 18px;
     }
-    
-    .containerA1 {
-        background-color: #fff;
-        margin: 20px;
-        width: 250px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        margin-top: 20px;
-        padding: 4px;
-        z-index: 12;
-    }
+
     
     
     .form-check {

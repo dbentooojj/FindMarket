@@ -20,7 +20,7 @@ def marketCooper():
         produtos_n = ['feijao', 'arroz', 'acucar', 'cafe', 'detergente', 'macarrao', 'molho de tomate', 'papel higienico', 'sal' ]
         produtos = ['busca?q=Feijao+1kg', 'listar/12', 'listar/5',  'listar/43',   'listar/401', 
         'listar/199', 'listar/106', 'busca?q=papel%20higiênico',  'listar/97']
-        mercado = 'Cooper'
+        mercadoa = 'Cooper'
         if j == mercados[0]:
             mercado = 'Cooper Água Verde'
 
@@ -168,10 +168,10 @@ def marketCooper():
                         verify_product = False
                 if verify_product:
                     if weight[i] != 0:
-                        banco.insert_peso(mercado, product_category, names[i], weight[i], float(prices[i]), imgs[i], links[i], logo, str(ar))
+                        banco.insert_peso(mercadoa, product_category, names[i], weight[i], float(prices[i]), imgs[i], links[i], logo, str(ar))
                     elif bulk[i] != 0:
-                        banco.insert_volume(mercado, product_category, names[i], bulk[i], float(prices[i]), imgs[i], links[i], logo, str(ar))
+                        banco.insert_volume(mercadoa, product_category, names[i], bulk[i], float(prices[i]), imgs[i], links[i], logo, str(ar))
                     else:
-                        banco.insert(mercado, product_category, names[i], float(prices[i]), imgs[i], links[i], logo, str(ar))
+                        banco.insert(mercadoa, product_category, names[i], float(prices[i]), imgs[i], links[i], logo, str(ar))
             navegador.quit()
     banco.finaliza()
