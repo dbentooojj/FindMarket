@@ -104,6 +104,34 @@ FindMarket - Seu amigo todos os dias
 
 </section>
 
+<div id="modal-promocao" class="modal-container">
+    <div class="modal">
+        <h3>Seleciona um mercado.</h3>
+        <form action="GET">
+            <div class="form-group">
+                <select class="form-control" id="mercado">
+                    <option>Cooper</option>
+                    <option>Atacadão</option>
+                    <option>Rede Top</option>
+                    <option>Giasse</option>
+                    <option>Fort Atacadista</option>
+                    <option>Bistek</option>
+                    <option>Supermercado Sams</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function iniciamodal(modalID) {
+const modal = document.getElementById(modalID);
+modal.classList.add('mostrar');
+}
+
+iniciamodal('modal-promocao');
+</script>
 
 <!-- bootstrap js -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
