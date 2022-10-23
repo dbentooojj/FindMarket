@@ -35,6 +35,7 @@ FindMarket - Seu amigo todos os dias
 
                 <div class="tudo">
                 <div class="gridtop">
+            {% if produtos %}
             {% for produto in produtos %}
                 <div class="col">
             <div class="card mb-4 box-shadow">
@@ -54,6 +55,9 @@ FindMarket - Seu amigo todos os dias
             </div>
         </div>
             {% endfor %}
+            {% else %}
+            <h5>Produto não encontrado.</h5>
+            {% endif %}
                     </div>
                 </div>
 

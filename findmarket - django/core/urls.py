@@ -14,7 +14,6 @@ urlpatterns = [
     path('bistek/', bistek, name='bistek'),
     path('rede/', rede_top, name='rede'),
     path('atacadao/', atacadao, name='atacadao'),
-    
     path('endereco/', endereco, name='endereco'),
     path('principal/', principal, name='principal'),
     path('feijao/', feijao, name='feijao'),
