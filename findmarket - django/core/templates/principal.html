@@ -116,6 +116,8 @@ FindMarket - Seu amigo todos os dias
                     {% for produto in produtos %}
                         <div class="col">
                     <div class="card mb-4 box-shadow">
+                    <img class="card-img-logo" style="width:8rem; position: relative; margin-left: 6.6rem; margin-top: 0.8rem;" src={{ produto.link_logo }} alt="Card image cap">
+                        
                     <img class="card-img-top" src={{ produto.imagem_produto }} alt="Card image cap">
                     <div class="card-body card-content" style="height:240px;">
                         <p class="card-text">{{ produto.nome_produto }}</p>
