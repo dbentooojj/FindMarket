@@ -33,24 +33,24 @@ FindMarket - Seu amigo todos os dias
                 <ul class="navbar-nav d-flex flex-column mt-5 w-100">
                     <li class="nav-item w-100">
                         <h5>Produtos</h5>
-                        <a href="/feijao/">Feijão</a><br>
-                        <a href="/arroz/">Arroz</a><br>
-                        <a href="/macarrao/">Macarrão</a><br>
-                        <a href="/sal/">Sal</a><br>
-                        <a href="/molho/">Molho de tomate</a><br>
-                        <a href="/farinha/">Farinha de trigo</a><br>
-                        <a href="/cafe/">Café</a><br>
-                        <a href="/detergente/">Detergente</a>
+                        <p onclick="callProduct('feijao')">Feijão</p>
+                        <p onclick="callProduct('Arroz')">Arroz</p>
+                        <p onclick="callProduct('Macarrão')">Macarrão</p>
+                        <p onclick="callProduct('Sal')">Sal</p>
+                        <p onclick="callProduct('Molho')">Molho de tomate</p>
+                        <p onclick="callProduct('Farinha')">Farinha de trigo</p>
+                        <p onclick="callProduct('Café')">Café</p>
+                        <p onclick="callProduct('Detergente')">Detergente</p>
                         <hr>
                         <h5>Mercados</h5>
-                        <a href="/principal/">Todos</a><br>
-                        <a href="/cooper/">Cooper</a><br>
-                        <a href="/atacadao/">Atacadão</a><br>
-                        <a href="/rede/">Rede Top</a><br>
-                        <a href="/giassi/">Giasse</a><br>
-                        <a href="/fort/">Fort Atacadista</a><br>
-                        <a href="/bistek/">Bistek</a><br>
-                        <a href="/sams/">Sam`s Market</a>
+                        <p onclick="callMarket('principal')">Todos</p>
+                        <p onclick="callMarket('cooper')">Cooper</p>
+                        <p onclick="callMarket('Atacadao')">Atacadão</p>
+                        <p onclick="callMarket('Rede')">Rede Top</p>
+                        <p onclick="callMarket('Giasse')">Giasse</p>
+                        <p onclick="callMarket('Fort')">Fort Atacadista</p>
+                        <p onclick="callMarket('Bistek')">Bistek</p>
+                        <p onclick="callMarket('Sam')">Sam`s Market</p>
                         <hr>
                     </li>
         
@@ -58,6 +58,20 @@ FindMarket - Seu amigo todos os dias
             </nav>
         </div>
         </div>
+
+        <script>
+            function callProduct(productName) {
+                const url = window.location.href.split('/')
+                var newUrl = url[0] + '//' + url[2] + '/' + 'principal/'+ productName + '/'
+                console.log(newUrl)
+            }
+
+            function callMarket(marketName) {
+                const url = window.location.href.split('/')
+                var newUrl = url[0] + '//' + url[2] + '/' + marketName + '/' + url[4] + '/'
+                console.log(newUrl)
+            }
+        </script>
     
         <div class="haha">
             <div id="cont1" class="album py-2 bg-white">

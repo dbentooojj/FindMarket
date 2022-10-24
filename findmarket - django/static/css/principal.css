@@ -930,15 +930,17 @@ nav h5 {
     margin-left: 1rem;
 }
 
-nav a {
+
+nav p {
     color: #fff;
     font-size: 1.2rem;
     font-weight: 300;
     margin-left: 1rem;
     text-decoration: none;
+    height: 18px;
 }
 
-nav a:hover {
+nav p:hover {
     color: #fff;
 }
 
