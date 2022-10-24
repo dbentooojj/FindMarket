@@ -20,6 +20,7 @@ class Produtos(models.Model):
     imagem_produto = models.CharField(max_length=200)
     link_produto = models.CharField(max_length=200)
     nome_produto = models.CharField(max_length=200)
+    price_weight_volume = models.FloatField(blank=True, null=True)
 
     class Meta:
         managed = False
