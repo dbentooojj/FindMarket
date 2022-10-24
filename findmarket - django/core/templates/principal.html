@@ -16,116 +16,152 @@ FindMarket - Seu amigo todos os dias
 
 
 <button class="btn-menuu" id="menu-btn">Menu</button>
+
 <div class="pesquisas">
     <form class="barraPesquisa" method="get">
         {{ meu_filtro.form.as_p }}
         <button class="botaoPesquisar" type="submit">Pesquisar</button>
     </form>
 </div>
-<section class="">
-    
-   
-    <div class="contentMaster">
-        <div class="haha2">
-        <div id="cont2">
-            <nav class="navbar navbar-expand d-flex flex-column align-item-start" id="sidebar">
 
-                <ul class="navbar-nav d-flex flex-column mt-5 w-100">
-                    <li class="nav-item w-100">
-                        <h5>Produtos</h5>
-                        <p onclick="callProduct('feijao')">Feijão</p>
-                        <p onclick="callProduct('Arroz')">Arroz</p>
-                        <p onclick="callProduct('Macarrão')">Macarrão</p>
-                        <p onclick="callProduct('Sal')">Sal</p>
-                        <p onclick="callProduct('Molho')">Molho de tomate</p>
-                        <p onclick="callProduct('Farinha')">Farinha de trigo</p>
-                        <p onclick="callProduct('Café')">Café</p>
-                        <p onclick="callProduct('Detergente')">Detergente</p>
-                        <hr>
-                        <h5>Mercados</h5>
-                        <p onclick="callMarket('principal')">Todos</p>
-                        <p onclick="callMarket('cooper')">Cooper</p>
-                        <p onclick="callMarket('Atacadao')">Atacadão</p>
-                        <p onclick="callMarket('Rede')">Rede Top</p>
-                        <p onclick="callMarket('Giasse')">Giasse</p>
-                        <p onclick="callMarket('Fort')">Fort Atacadista</p>
-                        <p onclick="callMarket('Bistek')">Bistek</p>
-                        <p onclick="callMarket('Sam')">Sam`s Market</p>
-                        <hr>
-                    </li>
+<div class="quase-tudo">
+
+
         
-                </ul>
-            </nav>
-        </div>
-        </div>
-
-        <script>
-            function callProduct(productName) {
-                const url = window.location.href.split('/')
-                var newUrl = url[0] + '//' + url[2] + '/' + 'principal/'+ productName + '/'
-                console.log(newUrl)
-            }
-
-            function callMarket(marketName) {
-                const url = window.location.href.split('/')
-                var newUrl = url[0] + '//' + url[2] + '/' + marketName + '/' + url[4] + '/'
-                console.log(newUrl)
-            }
-        </script>
     
-        <div class="haha">
-            <div id="cont1" class="album py-2 bg-white">
-                    <div class="gridtop">
-                {% if produtos %}
-                {% for produto in produtos %}
-                    <div class="col">
-                <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src={{ produto.imagem_produto }} alt="Card image cap">
-                <div class="card-body card-content" style="height:240px;">
-                    <p class="card-text">{{ produto.nome_produto }}</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <a href= {{produto.link_produto}} class="access-button">Acessar</a>
-                        <div class="info001">
-                            <p class="price"><small class="text-muted">R$ {{ produto.preco_produto }}</small></p>
+        <div class="contentMaster">
+            <div class="haha2">
+                <div id="cont2">
+                    <nav class="navbar navbar-expand d-flex flex-column align-item-start active-nav" id="sidebar">
+        
+                        <ul class="navbar-nav d-flex flex-column mt-5 w-100">
+                            <li class="nav-item w-100">
+                                <h5>Produtos</h5>
+                                <p onclick="callProduct('feijao')">Feijão</p>
+                                <p onclick="callProduct('Arroz')">Arroz</p>
+                                <p onclick="callProduct('Macarrão')">Macarrão</p>
+                                <p onclick="callProduct('Sal')">Sal</p>
+                                <p onclick="callProduct('Molho')">Molho de tomate</p>
+                                <p onclick="callProduct('Farinha')">Farinha de trigo</p>
+                                <p onclick="callProduct('Café')">Café</p>
+                                <p onclick="callProduct('Detergente')">Detergente</p>
+                                <hr>
+                                <h5>Mercados</h5>
+                                <p onclick="callMarket('principal')">Todos</p>
+                                <p onclick="callMarket('cooper')">Cooper</p>
+                                <p onclick="callMarket('Atacadao')">Atacadão</p>
+                                <p onclick="callMarket('Rede')">Rede Top</p>
+                                <p onclick="callMarket('Giasse')">Giasse</p>
+                                <p onclick="callMarket('Fort')">Fort Atacadista</p>
+                                <p onclick="callMarket('Bistek')">Bistek</p>
+                                <p onclick="callMarket('Sam')">Sam`s Market</p>
+                                <hr>
+                            </li>
+                
+                        </ul>
+                    </nav>
+                </div>
+                <div id="cont2-top">
+                    <nav class="sidebar-greg" >    
+                        <div class="lista-top">
+                            <div>
+                                <h5>Produtos</h5>
+                                <p onclick="callProduct('feijao')">Feijão</p>
+                                <p onclick="callProduct('Arroz')">Arroz</p>
+                                <p onclick="callProduct('Macarrão')">Macarrão</p>
+                                <p onclick="callProduct('Sal')">Sal</p>
+                                <p onclick="callProduct('Molho')">Molho de tomate</p>
+                                <p onclick="callProduct('Farinha')">Farinha de trigo</p>
+                                <p onclick="callProduct('Café')">Café</p>
+                                <p onclick="callProduct('Detergente')">Detergente</p>
+                            </div>
+                            <div>
+                                <h5>Mercados</h5>
+                                <p onclick="callMarket('principal')">Todos</p>
+                                <p onclick="callMarket('cooper')">Cooper</p>
+                                <p onclick="callMarket('Atacadao')">Atacadão</p>
+                                <p onclick="callMarket('Rede')">Rede Top</p>
+                                <p onclick="callMarket('Giasse')">Giasse</p>
+                                <p onclick="callMarket('Fort')">Fort Atacadista</p>
+                                <p onclick="callMarket('Bistek')">Bistek</p>
+                                <p onclick="callMarket('Sam')">Sam`s Market</p>
+                            </div>
                         </div>
-                    </div>
-                    <small class="text-muted"></small>
-                    </div>
-                </div>
-                </div>
+                    </nav>
+                </div>            
             </div>
-                {% endfor %}
-                {% else %}
-                <h5>Produto não encontrado.</h5>
-                {% endif %}
+
+            <script>
+                function callProduct(productName) {
+                    const url = window.location.href.split('/')
+                    var newUrl = url[0] + '//' + url[2] + '/' + url[3] + '/' + productName + '/'
+                    document.location.href = newUrl
+                }
+
+                function callMarket(marketName) {
+                    const url = window.location.href.split('/')
+                    var newUrl = url[0] + '//' + url[2] + '/' + marketName + '/' + url[4] + '/'
+                    document.location.href = newUrl
+                }
+            </script>
+        
+
+        <section class="">
+
+            <div class="haha">
+                <div id="cont1" class="album py-2 bg-white">
+                        <div class="gridtop">
+                    {% if produtos %}
+                    {% for produto in produtos %}
+                        <div class="col">
+                    <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src={{ produto.imagem_produto }} alt="Card image cap">
+                    <div class="card-body card-content" style="height:240px;">
+                        <p class="card-text">{{ produto.nome_produto }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a href= {{produto.link_produto}} class="access-button">Acessar</a>
+                            <div class="info001">
+                                <p class="price"><small class="text-muted">R$ {{ produto.preco_produto }}</small></p>
+                            </div>
+                        </div>
+                        <small class="text-muted"></small>
                         </div>
                     </div>
-    
-                <div class="pagination">
-                    <span class="step-links">
-                        {% if produtos.has_previous %}
-                            <a href="?page={{ produtos.previous_page_number }}"><i class="fas fa-arrow-left"></i></a>
-                        {% endif %}
-    
-                        <span class="current">
-                            Página {{ produtos.number }} de {{ produtos.paginator.num_pages }}.
+                    </div>
+                </div>
+                    {% endfor %}
+                    {% else %}
+                    <h5>Produto não encontrado.</h5>
+                    {% endif %}
+                            </div>
+                        </div>
+        
+                    <div class="pagination">
+                        <span class="step-links">
+                            {% if produtos.has_previous %}
+                                <a href="?page={{ produtos.previous_page_number }}"><i class="fas fa-arrow-left"></i></a>
+                            {% endif %}
+        
+                            <span class="current">
+                                Página {{ produtos.number }} de {{ produtos.paginator.num_pages }}.
+                            </span>
+        
+                            {% if produtos.has_next %}
+                                <a href="?page={{ produtos.next_page_number }}"><i class="fas fa-arrow-right"></i></a>
+                            {% endif %}
                         </span>
-    
-                        {% if produtos.has_next %}
-                            <a href="?page={{ produtos.next_page_number }}"><i class="fas fa-arrow-right"></i></a>
-                        {% endif %}
-                    </span>
+                    </div>
+        
+                    </div>
                 </div>
-    
-                </div>
-            </div>
-    
-    </div>
+        
+        </div>
 
-</section>
+    </section>
+</div>
 
-<div id="modal-promocao" class="modal-container">
+<div id="modal-promocao" class="modal-container mostrar">
     <div class="modal">
         <h3>Seleciona um mercado.</h3>
         <form action="GET">
@@ -182,8 +218,8 @@ FindMarket - Seu amigo todos os dias
 
 <script>
     function iniciamodal(modalID) {
-const modal = document.getElementById(modalID);
-modal.classList.add('mostrar');
+    const modal = document.getElementById(modalID);
+    modal.classList.add('mostrar');
 }
 
 iniciamodal('modal-promocao');

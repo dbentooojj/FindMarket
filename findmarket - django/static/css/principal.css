@@ -679,7 +679,7 @@ root {
     .barraPesquisa {
         display: flex;
         margin-top: 0.2rem;
-        margin-left: 5rem;
+        /* margin-left: 5rem; */
         left: 0;
     }
 
@@ -688,14 +688,13 @@ root {
         font-size: 1rem;
         outline: none;
         margin-top: 0.2rem;
-        background-color: rgb(215, 32, 32);
         height: 1.6rem;
         box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;
     }
 
     #id_nome_produto {
         border-radius: 7px;
-        width: 13.6rem;
+        width: 200px !important;
         border: none;
     }
 
@@ -709,9 +708,10 @@ root {
         margin-top: 1.2rem;
     }
 
+
     .pesquisas form {
         background-color: #fff;
-        width: 100%;
+        /* width: 100%; */
         padding: 1rem;
         height: 4rem;
     }
@@ -813,7 +813,7 @@ root {
     .barraPesquisa {
         display: flex;
         margin-top: 1.2rem;
-        margin-left: 5rem;
+        /* margin-left: 5rem; */
         top: 0;
     }
 
@@ -829,7 +829,6 @@ root {
 
     #id_nome_produto {
         border: none;
-        width: 62rem;
         height: 2rem;
     }
 
@@ -897,6 +896,80 @@ root {
     margin-left: 0;
 }
 
+.sidebar-greg{
+    height: 400px;
+    width: 100vw;
+    background-color: transparent;
+    color: black;
+}
+
+.lista-top{
+    display: flex;
+    width: 100vw;
+
+    justify-content: center;
+    gap: 40px;
+    color: black;
+}
+
+
+.lista-top p{
+    color: black;
+    font-weight: medium;
+}
+
+.lista-top h5{
+    color: black;
+}
+
+.quase-tudo{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#cont2-top{
+    background-color: white;
+}
+
+
+@media screen and (min-width:1100px ){
+    
+    #menu-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   
+    #cont2{
+        display: flex;
+    }    
+    #cont2-top{
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width:1100px ){
+    
+    .pesquisas {
+        margin-top: 120px;
+    }
+
+    #menu-btn{
+        display: none;
+    }    
+    #cont2{
+        display: none;
+    }    
+    #cont2-top{
+        display: flex;
+    }
+
+    .contentMaster{
+        flex-direction: column;
+    }    
+
+}
 
 /* for main section */
 
@@ -965,7 +1038,7 @@ nav p:hover {
 }
 
 .modal-container-top.mostrar {
-    display: none;
+    display: flex;
 }
 
 .modal-top {
@@ -1035,7 +1108,8 @@ form button:hover {
 .barraPesquisa {
     display: flex;
     margin-top: -32px;
-    margin-left: 10.5rem;
+    justify-content: center;
+    /* margin-left: 10.5rem; */
     left: 0;
 }
 
