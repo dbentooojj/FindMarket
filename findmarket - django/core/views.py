@@ -19,7 +19,7 @@ def cooper(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_cooper.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def cooperfeijao(request):
     mercado = {'mercado':'Cooper'}
@@ -32,7 +32,7 @@ def cooperfeijao(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_cooper.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
     
 def cooperarroz(request):
     mercado = {'mercado':'Cooper'}
@@ -45,7 +45,7 @@ def cooperarroz(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_cooper.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def coopermacarrao(request):
     mercado = {'mercado':'Cooper'}
@@ -58,7 +58,7 @@ def coopermacarrao(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_cooper.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def coopermolho(request):
     mercado = {'mercado':'Cooper'}
@@ -71,7 +71,7 @@ def coopermolho(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_cooper.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def cooperpapel(request):
     mercado = {'mercado':'Cooper'}
@@ -84,7 +84,7 @@ def cooperpapel(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_cooper.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def coopersal(request):
     mercado = {'mercado':'Cooper'}
@@ -97,7 +97,7 @@ def coopersal(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_cooper.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def cooperdetergente(request):
     mercado = {'mercado':'Cooper'}
@@ -110,7 +110,7 @@ def cooperdetergente(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_cooper.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def cooperfarinha(request):
     mercado = {'mercado':'Cooper'}
@@ -123,7 +123,7 @@ def cooperfarinha(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_cooper.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 
 
@@ -138,7 +138,7 @@ def atacadao(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_atacadao.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def atacadaofeijao(request):
     mercado = {'mercado':'Atacadao'}
@@ -151,7 +151,7 @@ def atacadaofeijao(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_atacadao.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
     
 def atacadaoarroz(request):
     mercado = {'mercado':'Atacadao'}
@@ -164,7 +164,7 @@ def atacadaoarroz(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_atacadao.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def atacadaomacarrao(request):
     mercado = {'mercado':'Atacadao'}
@@ -177,7 +177,7 @@ def atacadaomacarrao(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_atacadao.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def atacadaomolho(request):
     mercado = {'mercado':'Atacadao'}
@@ -190,7 +190,7 @@ def atacadaomolho(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_atacadao.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def atacadaopapel(request):
     mercado = {'mercado':'Atacadao'}
@@ -203,7 +203,7 @@ def atacadaopapel(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_atacadao.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def atacadaosal(request):
     mercado = {'mercado':'Atacadao'}
@@ -216,7 +216,7 @@ def atacadaosal(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_atacadao.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def atacadaodetergente(request):
     mercado = {'mercado':'Atacadao'}
@@ -229,7 +229,7 @@ def atacadaodetergente(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_atacadao.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def atacadaofarinha(request):
     mercado = {'mercado':'Atacadao'}
@@ -242,7 +242,7 @@ def atacadaofarinha(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_atacadao.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 #---------------rede
 def rede(request):
@@ -254,7 +254,7 @@ def rede(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_rede.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def redefeijao(request):
     mercado = {'mercado':'Rede Top'}
@@ -267,7 +267,7 @@ def redefeijao(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_rede.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
     
 def redearroz(request):
     mercado = {'mercado':'Rede Top'}
@@ -280,7 +280,7 @@ def redearroz(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_rede.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def redemacarrao(request):
     mercado = {'mercado':'Rede Top'}
@@ -293,7 +293,7 @@ def redemacarrao(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_rede.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def redemolho(request):
     mercado = {'mercado':'Rede Top'}
@@ -306,7 +306,7 @@ def redemolho(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_rede.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def redepapel(request):
     mercado = {'mercado':'Rede Top'}
@@ -319,7 +319,7 @@ def redepapel(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_rede.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def redesal(request):
     mercado = {'mercado':'Rede Top'}
@@ -332,7 +332,7 @@ def redesal(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_rede.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def rededetergente(request):
     mercado = {'mercado':'Rede Top'}
@@ -345,7 +345,7 @@ def rededetergente(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_rede.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def redefarinha(request):
     mercado = {'mercado':'Rede Top'}
@@ -358,7 +358,7 @@ def redefarinha(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_rede.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 #---------------giassi
 def giassi(request):
@@ -370,7 +370,7 @@ def giassi(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_giassi.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def giassifeijao(request):
     mercado = {'mercado':'Giassi'}
@@ -383,7 +383,7 @@ def giassifeijao(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_giassi.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
     
 def giassiarroz(request):
     mercado = {'mercado':'Giassi'}
@@ -396,7 +396,7 @@ def giassiarroz(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_giassi.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def giassimacarrao(request):
     mercado = {'mercado':'Giassi'}
@@ -409,7 +409,7 @@ def giassimacarrao(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_giassi.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def giassimolho(request):
     mercado = {'mercado':'Giassi'}
@@ -422,7 +422,7 @@ def giassimolho(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_giassi.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def giassipapel(request):
     mercado = {'mercado':'Giassi'}
@@ -435,7 +435,7 @@ def giassipapel(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_giassi.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def giassisal(request):
     mercado = {'mercado':'Giassi'}
@@ -448,7 +448,7 @@ def giassisal(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_giassi.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def giassidetergente(request):
     mercado = {'mercado':'Giassi'}
@@ -461,7 +461,7 @@ def giassidetergente(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_giassi.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def giassifarinha(request):
     mercado = {'mercado':'Giassi'}
@@ -474,7 +474,7 @@ def giassifarinha(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_giassi.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 
 #---------------fort
@@ -486,7 +486,7 @@ def fort(request):
     paginator = Paginator(produtos_list, 12)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
-    return render(request, '_fort.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def fortfeijao(request):
     mercado = {'mercado':'Fort Atacadista'}
@@ -499,7 +499,7 @@ def fortfeijao(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_fort.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
     
 def fortarroz(request):
     mercado = {'mercado':'Fort Atacadista'}
@@ -512,7 +512,7 @@ def fortarroz(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_fort.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def fortmacarrao(request):
     mercado = {'mercado':'Fort Atacadista'}
@@ -525,7 +525,7 @@ def fortmacarrao(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_fort.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def fortmolho(request):
     mercado = {'mercado':'Fort Atacadista'}
@@ -538,7 +538,7 @@ def fortmolho(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_fort.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def fortpapel(request):
     mercado = {'mercado':'Fort Atacadista'}
@@ -551,7 +551,7 @@ def fortpapel(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_fort.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def fortsal(request):
     mercado = {'mercado':'Fort Atacadista'}
@@ -564,7 +564,7 @@ def fortsal(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_fort.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def fortdetergente(request):
     mercado = {'mercado':'Fort Atacadista'}
@@ -577,7 +577,7 @@ def fortdetergente(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_fort.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def fortfarinha(request):
     mercado = {'mercado':'Fort Atacadista'}
@@ -590,7 +590,7 @@ def fortfarinha(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_fort.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 # -------------bistek
     
@@ -603,7 +603,7 @@ def bistek(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_bistek.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def bistekfeijao(request):
     mercado = {'mercado':'Bistek'}
@@ -616,7 +616,7 @@ def bistekfeijao(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_bistek.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
     
 def bistekarroz(request):
     mercado = {'mercado':'Bistek'}
@@ -629,7 +629,7 @@ def bistekarroz(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_bistek.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def bistekmacarrao(request):
     mercado = {'mercado':'Bistek'}
@@ -642,7 +642,7 @@ def bistekmacarrao(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_bistek.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def bistekmolho(request):
     mercado = {'mercado':'Bistek'}
@@ -655,7 +655,7 @@ def bistekmolho(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_bistek.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def bistekpapel(request):
     mercado = {'mercado':'Bistek'}
@@ -668,7 +668,7 @@ def bistekpapel(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_bistek.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def bisteksal(request):
     mercado = {'mercado':'Bistek'}
@@ -681,7 +681,7 @@ def bisteksal(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_bistek.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def bistekdetergente(request):
     mercado = {'mercado':'Bistek'}
@@ -694,7 +694,7 @@ def bistekdetergente(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_bistek.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def bistekfarinha(request):
     mercado = {'mercado':'Bistek'}
@@ -707,7 +707,7 @@ def bistekfarinha(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_bistek.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 
 # -------------sams
@@ -720,7 +720,7 @@ def sams(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_sams.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def samsfeijao(request):
     mercado = {'mercado':'Sams'}
@@ -733,7 +733,7 @@ def samsfeijao(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_sams.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
     
 def samsarroz(request):
     mercado = {'mercado':'Sams'}
@@ -746,7 +746,7 @@ def samsarroz(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_sams.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def samsmacarrao(request):
     mercado = {'mercado':'Sams'}
@@ -759,7 +759,7 @@ def samsmacarrao(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_sams.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def samsmolho(request):
     mercado = {'mercado':'Sams'}
@@ -772,7 +772,7 @@ def samsmolho(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_sams.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def samspapel(request):
     mercado = {'mercado':'Sams'}
@@ -785,7 +785,7 @@ def samspapel(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_sams.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def samssal(request):
     mercado = {'mercado':'Sams'}
@@ -798,7 +798,7 @@ def samssal(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_sams.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def samsdetergente(request):
     mercado = {'mercado':'Sams'}
@@ -811,7 +811,7 @@ def samsdetergente(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_sams.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def samsfarinha(request):
     mercado = {'mercado':'Sams'}
@@ -824,7 +824,7 @@ def samsfarinha(request):
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
-    return render(request, '_sams.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 def homepage(request):
     return render(request, 'homepage.html')
 
@@ -947,7 +947,8 @@ def cafe(request):
     return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def detergente(request):
-    produtos_list = produtos_list.filter(categoria='detergente').order_by('price_weight_volume')
+
+    produtos_list = Produtos.objects.all().filter(categoria='detergente').order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
