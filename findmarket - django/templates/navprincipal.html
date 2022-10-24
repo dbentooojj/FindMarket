@@ -1,19 +1,46 @@
 {% load static %}
 
+<style>
+    .header-navbar001{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 10;
+    }    
+    
+    .header-navbar001 nav{
+        padding: 0px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-<header class="navbar001">
+    .header-logo-img{
+        height: 40px;
+    }
+
+    .header-nav-list{
+        margin: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+    
+
+</style>
+
+<header class="header-navbar001">
+
+
         <nav>
-                <a class="logo" href="/">
-                    <img class="logo_img" src="{% static 'images/Semcor_Aolado.png' %}">
-                </a>
-                    <ul class="nav-list">
-                        <li><a class="link" href="/">Inicio</a></li>
-                        <li><a class="link" href="/contato">Contato</a></li>
-                    </ul>
-                    
-                    </div>
-                    
-                </div>
-            </div>    
+            <a href="/">
+                <img class="header-logo-img" src="{% static 'images/Semcor_Aolado.png' %}">
+            </a>
+            <div class="header-nav-list">
+                <a class="link" href="/">Inicio</a>
+                <a class="link" href="/contato">Contato</a>
+            </div> 
         </nav>
 </header>
