@@ -43,7 +43,7 @@ FindMarket - Seu amigo todos os dias
                         <a href="/detergente/">Detergente</a>
                         <hr>
                         <h5>Mercados</h5>
-                        <a href="/principal/">Todos</a>
+                        <a href="/principal/">Todos</a><br>
                         <a href="/cooper/">Cooper</a><br>
                         <a href="/atacadao/">Atacadão</a><br>
                         <a href="/rede/">Rede Top</a><br>
@@ -53,7 +53,7 @@ FindMarket - Seu amigo todos os dias
                         <a href="/sams/">Sam`s Market</a>
                         <hr>
                     </li>
-            
+        
                 </ul>
             </nav>
         </div>
@@ -145,13 +145,13 @@ FindMarket - Seu amigo todos os dias
 </script>
 
 
-<div id="modal-promocao" class="modal-container">
-    <div class="modal">
+<div id="modal-promocao" class="modal-container-top">
+    <div class="modal-top">
         <h3>Seleciona um mercado.</h3>
         <form action="" method="POST">
             {% csrf_token %}
-            <div class="form-group">
-                <select name="mercado" id="mercado" class="form-control">
+            <div class="form-group-top">
+                <select name="mercado" id="mercado" class="form-control-top">
                     <option value="Cooper">Cooper</option>
                     <option value="Atacadão">Atacadão</option>
                     <option value="Rede Top">Rede Top</option>
@@ -167,12 +167,12 @@ FindMarket - Seu amigo todos os dias
 </div>
 
 <script>
-    function openModal(modalID) {
-        const modal = document.getElementById(modalID);
-        modal.classList.add('mostrar');
-    }
+    function iniciamodal(modalID) {
+const modal = document.getElementById(modalID);
+modal.classList.add('mostrar');
+}
 
-    openModal('modal-promocao');
+iniciamodal('modal-promocao');
 </script>
 
 {% endblock %}

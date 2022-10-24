@@ -10,4 +10,4 @@ class ProductFilter(django_filters.FilterSet):
     class Meta:
         model = Produtos
         fields = '__all__'
-        exclude = ['idprodutos', 'mercado', 'categoria', 'peso_produto', 'preco_produto', 'imagem_produto', 'link_produto', 'link_logo', 'data_produto', 'volume_produto', ]
+        exclude = ['idprodutos', 'mercado', 'categoria', 'peso_produto', 'preco_produto', 'imagem_produto', 'link_produto', 'link_logo', 'data_produto', 'volume_produto', 'price_weight_volume' ]
