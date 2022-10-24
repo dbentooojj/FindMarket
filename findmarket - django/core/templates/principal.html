@@ -16,6 +16,12 @@ FindMarket - Seu amigo todos os dias
 
 
 <button class="btn-menuu" id="menu-btn">Menu</button>
+<div class="pesquisas">
+    <form class="barraPesquisa" method="get">
+        {{ meu_filtro.form.as_p }}
+        <button class="botaoPesquisar" type="submit">Pesquisar</button>
+    </form>
+</div>
 <section class="">
     
    
@@ -124,16 +130,6 @@ FindMarket - Seu amigo todos os dias
         </form>
     </div>
 </div>
-
-<script>
-    function iniciamodal(modalID) {
-const modal = document.getElementById(modalID);
-modal.classList.add('mostrar');
-}
-
-iniciamodal('modal-promocao');
-</script>
-
 <!-- bootstrap js -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
@@ -146,6 +142,37 @@ iniciamodal('modal-promocao');
         sidebar.classList.toggle("active-nav")
         container.classList.toggle("active-cont")
     })
+</script>
+
+
+<div id="modal-promocao" class="modal-container">
+    <div class="modal">
+        <h3>Seleciona um mercado.</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <select name="mercado" id="mercado" class="form-control">
+                    <option value="Cooper">Cooper</option>
+                    <option value="Atacadão">Atacadão</option>
+                    <option value="Rede Top">Rede Top</option>
+                    <option value="Giasse">Giasse</option>
+                    <option value="Fort Atacadista">Fort Atacadista</option>
+                    <option value="Bistek">Bistek</option>
+                    <option value="Supermercado sams">Supermercado sams</option>
+                </select>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function openModal(modalID) {
+        const modal = document.getElementById(modalID);
+        modal.classList.add('mostrar');
+    }
+
+    openModal('modal-promocao');
 </script>
 
 {% endblock %}

@@ -12,28 +12,10 @@
                         <li><a class="link" href="/">Inicio</a></li>
                         <li><a class="link" href="/contato">Contato</a></li>
                     </ul>
-                    <button id="open-modal">Filtros</button>
-                    <div id="fade" class="hide"></div>
-                    <div id="modal" class="hide">
-                        <div class="modal-header">
-                            <h2 class="tituloModal">Filtro</h2>
-                            <button id="close-modal">Fechar</button>
-                        </div>
-                        <div class="modal-body">
-                            {% include 'sidebar.html' %}
-                        </div>
+                    
                     </div>
-                    <div class="pesquisas">
-                        <form class="barraPesquisa" method="get">
-                            {{ meu_filtro.form.as_p }}
-                            <button class="botaoPesquisar" type="submit">Pesquisar</button>
-                        </form>
-                    </div>
+                    
                 </div>
             </div>    
         </nav>
-
-
 </header>
-
-<script src="{% static 'js/modal.js' %}"></script>
