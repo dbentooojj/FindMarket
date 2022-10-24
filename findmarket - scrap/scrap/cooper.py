@@ -11,9 +11,9 @@ from MySQL import CRUD
 def marketCooper():
 
     banco = CRUD()
-    logo = ''
+    logo = r'https://raw.githubusercontent.com/dbentooojj/FindMarket/master/findmarket%20-%20django/static/images/COOPER.png'
     ar = arrow.now().format('DD/MM/YYYY')
-    mercados = ['a.verde', 'garcia', 'i.norte', 'mafisa', 'v.nova']
+    mercados = ['a.verde']
     key_words  = filtros().key_words
     for j in mercados:
         #feijao, arroz, açucar, café, >>cerveja, detergente, feijao, macarrao, molho, papel higienico, sal

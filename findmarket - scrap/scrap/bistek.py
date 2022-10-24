@@ -14,7 +14,7 @@ from filtros import filtros
 def marketBistek():
     banco = CRUD()
     ar = arrow.now().format('DD/MM/YYYY')
-    logo = ''
+    logo = r'https://raw.githubusercontent.com/dbentooojj/FindMarket/master/findmarket%20-%20django/static/images/BISTEK.png'
     key_words  = filtros().key_words
     produtos = ['arroz', 'molho de tomate', 'acucar', 'papel higienico', 'feijao',  'sal',  'farinha', 'macarrao', 'cafe', 'detergente' ]
 

@@ -15,7 +15,7 @@ def cooper(request):
     produtos_list = Produtos.objects.all().filter(**mercado).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -28,7 +28,7 @@ def cooperfeijao(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -41,7 +41,7 @@ def cooperarroz(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -54,7 +54,7 @@ def coopermacarrao(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -67,7 +67,7 @@ def coopermolho(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -80,7 +80,7 @@ def cooperpapel(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -93,7 +93,7 @@ def coopersal(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -106,7 +106,7 @@ def cooperdetergente(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -119,12 +119,24 @@ def cooperfarinha(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
     return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
+def coopercafe(request):
+    mercado = {'mercado':'Cooper'}
+    categoria = {'categoria':'cafe'}
+    produtos_list = Produtos.objects.all().filter(**mercado)
+    produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
+    paginator = Paginator(produtos_list, 15)
+    page = request.GET.get('page')
+    produtos = paginator.get_page(page)
+
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 
 #---------------atacadao
@@ -134,7 +146,7 @@ def atacadao(request):
     
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -147,7 +159,20 @@ def atacadaofeijao(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
+    page = request.GET.get('page')
+    produtos = paginator.get_page(page)
+
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+
+def atacadaocafe(request):
+    mercado = {'mercado':'Atacadao'}
+    categoria = {'categoria':'cafe'}
+    produtos_list = Produtos.objects.all().filter(**mercado)
+    produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -160,7 +185,7 @@ def atacadaoarroz(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -173,7 +198,7 @@ def atacadaomacarrao(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -186,7 +211,7 @@ def atacadaomolho(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -199,7 +224,7 @@ def atacadaopapel(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -212,7 +237,7 @@ def atacadaosal(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -225,7 +250,7 @@ def atacadaodetergente(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -238,7 +263,7 @@ def atacadaofarinha(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -250,7 +275,7 @@ def rede(request):
     produtos_list = Produtos.objects.all().filter(**mercado).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -263,7 +288,20 @@ def redefeijao(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
+    page = request.GET.get('page')
+    produtos = paginator.get_page(page)
+
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+
+def redecafe(request):
+    mercado = {'mercado':'Rede Top'}
+    categoria = {'categoria':'cafe'}
+    produtos_list = Produtos.objects.all().filter(**mercado)
+    produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -276,7 +314,7 @@ def redearroz(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -289,7 +327,7 @@ def redemacarrao(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -302,7 +340,7 @@ def redemolho(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -315,7 +353,7 @@ def redepapel(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -328,7 +366,7 @@ def redesal(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -341,7 +379,7 @@ def rededetergente(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -354,7 +392,7 @@ def redefarinha(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -366,7 +404,7 @@ def giassi(request):
     produtos_list = Produtos.objects.all().filter(**mercado).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -379,7 +417,18 @@ def giassifeijao(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
+    page = request.GET.get('page')
+    produtos = paginator.get_page(page)
+
+def giassicafe(request):
+    mercado = {'mercado':'Giassi'}
+    categoria = {'categoria':'cafe'}
+    produtos_list = Produtos.objects.all().filter(**mercado)
+    produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -392,7 +441,7 @@ def giassiarroz(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -405,7 +454,7 @@ def giassimacarrao(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -418,7 +467,7 @@ def giassimolho(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -431,7 +480,7 @@ def giassipapel(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -444,7 +493,7 @@ def giassisal(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -457,7 +506,7 @@ def giassidetergente(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -470,7 +519,7 @@ def giassifarinha(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -483,7 +532,7 @@ def fort(request):
     produtos_list = Produtos.objects.all().filter(**mercado).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
     return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
@@ -495,7 +544,20 @@ def fortfeijao(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
+    page = request.GET.get('page')
+    produtos = paginator.get_page(page)
+
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+
+def fortcafe(request):
+    mercado = {'mercado':'Fort Atacadista'}
+    categoria = {'categoria':'cafe'}
+    produtos_list = Produtos.objects.all().filter(**mercado)
+    produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -508,7 +570,7 @@ def fortarroz(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -521,7 +583,7 @@ def fortmacarrao(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -534,7 +596,7 @@ def fortmolho(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -547,7 +609,7 @@ def fortpapel(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -560,7 +622,7 @@ def fortsal(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -573,7 +635,7 @@ def fortdetergente(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -586,7 +648,7 @@ def fortfarinha(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -599,7 +661,7 @@ def bistek(request):
     produtos_list = Produtos.objects.all().filter(**mercado).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -612,7 +674,20 @@ def bistekfeijao(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
+    page = request.GET.get('page')
+    produtos = paginator.get_page(page)
+
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+
+def bistekcafe(request):
+    mercado = {'mercado':'Bistek'}
+    categoria = {'categoria':'cafe'}
+    produtos_list = Produtos.objects.all().filter(**mercado)
+    produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -625,7 +700,7 @@ def bistekarroz(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -638,7 +713,7 @@ def bistekmacarrao(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -651,7 +726,7 @@ def bistekmolho(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -664,7 +739,7 @@ def bistekpapel(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -677,7 +752,7 @@ def bisteksal(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -690,7 +765,7 @@ def bistekdetergente(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -703,7 +778,7 @@ def bistekfarinha(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -716,7 +791,7 @@ def sams(request):
     produtos_list = Produtos.objects.all().filter(**mercado).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -729,7 +804,20 @@ def samsfeijao(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
+    page = request.GET.get('page')
+    produtos = paginator.get_page(page)
+
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+
+def samscafe(request):
+    mercado = {'mercado':'Sams'}
+    categoria = {'categoria':'cafe'}
+    produtos_list = Produtos.objects.all().filter(**mercado)
+    produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -742,7 +830,7 @@ def samsarroz(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -755,7 +843,7 @@ def samsmacarrao(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -768,7 +856,7 @@ def samsmolho(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -781,7 +869,7 @@ def samspapel(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -794,7 +882,7 @@ def samssal(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -807,7 +895,7 @@ def samsdetergente(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -820,7 +908,7 @@ def samsfarinha(request):
     produtos_list = produtos_list.filter(**categoria).order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -853,7 +941,7 @@ def principal(request):
     produtos_list = Produtos.objects.all().order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -863,7 +951,7 @@ def principal2(request):
     produtos_list = Produtos.objects.all().order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -874,18 +962,27 @@ def feijao(request):
     produtos_list = Produtos.objects.all().filter(categoria='feijao').order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
     return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
+def papel(request):
+    produtos_list = Produtos.objects.all().filter(categoria='papel higienico').order_by('price_weight_volume')
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
+    paginator = Paginator(produtos_list, 15)
+    page = request.GET.get('page')
+    produtos = paginator.get_page(page)
+
+    return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def arroz(request):
     produtos_list = Produtos.objects.all().filter(categoria='arroz').order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -896,7 +993,7 @@ def macarrao(request):
     produtos_list = Produtos.objects.all().filter(categoria='macarrao').order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -907,7 +1004,7 @@ def sal(request):
     produtos_list = Produtos.objects.all().filter(categoria='sal').order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -918,7 +1015,7 @@ def molho_tomate(request):
     produtos_list = Produtos.objects.all().filter(categoria='molho de tomate').order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -930,7 +1027,7 @@ def farinha_trigo(request):
     produtos_list = produtos_list.filter(categoria='farinha').order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -940,7 +1037,7 @@ def cafe(request):
     produtos_list = Produtos.objects.all().filter(categoria='cafe').order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -951,7 +1048,7 @@ def detergente(request):
     produtos_list = Produtos.objects.all().filter(categoria='detergente').order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 
@@ -963,7 +1060,7 @@ def contato(request):
 def mercado(request):
     mercados = {'mercado': 'Bistek', 'mercado': 'Fort Atacadista'}
     produtos_list = Produtos.objects.all().filter(**mercados).order_by('price_weight_volume')
-    paginator = Paginator(produtos_list, 12)
+    paginator = Paginator(produtos_list, 15)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)
 

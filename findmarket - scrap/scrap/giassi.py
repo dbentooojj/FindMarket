@@ -14,10 +14,10 @@ from filtros import filtros
 
 def marketGiassi():
     banco = CRUD()
-    logo = ''
+    logo = r'https://raw.githubusercontent.com/dbentooojj/FindMarket/master/findmarket%20-%20django/static/images/logoGiassi.png'
     ar = arrow.now().format('DD/MM/YYYY')
     key_words = filtros().key_words
-    produtos = ['arroz', 'feijao', 'açucar', 'sal', 'Molho de Tomate', 'Farinha', 'Macarrão', 'Café', 'Detergente', 'Papel Higiênico']
+    produtos = ['arroz', 'feijao', 'acucar', 'sal', 'molho de tomate', 'farinha', 'Macarrão', 'cafe', 'detergente', 'papel higiencio']
 
     # ---------------------------------------------------- ABRIR O SITE ------------------------------------------------- #
     for p in produtos:

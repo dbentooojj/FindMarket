@@ -10,7 +10,7 @@ from MySQL import CRUD
 from filtros import filtros
 def marketFortAtacadista():
     banco = CRUD()
-    logo = ''
+    logo = r'https://raw.githubusercontent.com/dbentooojj/FindMarket/master/findmarket%20-%20django/static/images/FORT.png'
     ar = arrow.now().format('DD/MM/YYYY')
     #ceps 89052-381 (itoupava norte), 89066-003 (Itoupavazinha), 
     key_words  = filtros().key_words

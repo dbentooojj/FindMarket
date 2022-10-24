@@ -10,12 +10,12 @@ from MySQL import CRUD
 from filtros import filtros
 def marketRedeTop():
     banco = CRUD()
-    logo = ''
+    logo = r'https://raw.githubusercontent.com/dbentooojj/FindMarket/master/findmarket%20-%20django/static/images/REDETOP.png'
     acucar= ''
     sal = ''
     ar = arrow.now().format('DD/MM/YYYY')
     key_words = filtros().key_words
-    produtos = [ 'sal', 'arroz', 'feijao', 'acucar', 'Molho de Tomate', 'Farinha', 'Macarrão', 'Café', 'Detergente', 'Papel Higiênico']
+    produtos = [ 'sal', 'arroz', 'feijao', 'acucar', 'molho de tomate', 'farinha', 'macarrao', 'cafe', 'detergente', 'papel higienico']
     
     # ---------------------------------------------------- ABRIR O SITE ------------------------------------------------- #
 

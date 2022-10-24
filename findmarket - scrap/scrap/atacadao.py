@@ -10,7 +10,7 @@ from filtros import filtros
 
 def marketAtacadao():
     banco = CRUD()
-    logo = ''
+    logo = r'https://raw.githubusercontent.com/dbentooojj/FindMarket/master/findmarket%20-%20django/static/images/ATACADAO.png'
     ar = arrow.now().format('DD/MM/YYYY')
     key_words  = filtros().key_words
 

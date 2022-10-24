@@ -1,29 +1,29 @@
 # criando as paginas do site (urls - views(o que vai acontecer) - templates(visual do site)))
 
 from django.urls import path, include
-from .views import homepage, login, cadastro, endereco, principal, principal2, feijao, arroz, macarrao, sal, molho_tomate, farinha_trigo, cafe, detergente, contato, sams, bistek, atacadao, rede, giassi, cooper, fort
+from .views import homepage, login, cafe, papel, cadastro, endereco, principal, principal2, feijao, arroz, macarrao, sal, molho_tomate, farinha_trigo, cafe, detergente, contato, sams, bistek, atacadao, rede, giassi, cooper, fort
 
 #cooper
-from .views import cooperfeijao, cooperarroz, coopermacarrao, coopermolho, cooperpapel, cooperfarinha, cooperdetergente, coopersal
+from .views import cooperfeijao, cooperarroz, coopermacarrao, coopermolho, cooperpapel, cooperfarinha, cooperdetergente, coopersal, coopercafe
 #sams
-from .views import samsfeijao, samsarroz, samsmacarrao, samsmolho, samspapel, samsfarinha, samsdetergente, samssal
+from .views import samsfeijao, samsarroz, samsmacarrao, samsmolho, samspapel, samsfarinha, samsdetergente, samssal, samscafe
 #fort
-from .views import fortfeijao, fortarroz, fortmacarrao, fortmolho, fortpapel, fortfarinha, fortdetergente, fortsal
+from .views import fortfeijao, fortarroz, fortmacarrao, fortmolho, fortpapel, fortfarinha, fortdetergente, fortsal, fortcafe
 #giassi
-from .views import giassifeijao, giassiarroz, giassimacarrao, giassimolho, giassipapel, giassifarinha, giassidetergente, giassisal
+from .views import giassifeijao, giassiarroz, giassimacarrao, giassimolho, giassipapel, giassifarinha, giassidetergente, giassisal, giassicafe
 #rede
-from .views import redefeijao, redearroz, redemacarrao, redemolho, redepapel, redefarinha, rededetergente, redesal
+from .views import redefeijao, redearroz, redemacarrao, redemolho, redepapel, redefarinha, rededetergente, redesal, redecafe
 #atacadao
-from .views import atacadaofeijao, atacadaoarroz, atacadaomacarrao, atacadaomolho, atacadaopapel, atacadaofarinha, atacadaodetergente, atacadaosal
+from .views import atacadaofeijao, atacadaoarroz, atacadaomacarrao, atacadaomolho, atacadaopapel, atacadaofarinha, atacadaodetergente, atacadaosal, atacadaocafe
 #bistek
-from .views import bistekfeijao, bistekarroz, bistekmacarrao, bistekmolho, bistekpapel, bistekfarinha, bistekdetergente, bisteksal
+from .views import bistekfeijao, bistekarroz, bistekmacarrao, bistekmolho, bistekpapel, bistekfarinha, bistekdetergente, bisteksal, bistekcafe
 
 urlpatterns = [
     path('', homepage, name='homepage'),
     path('login/', login, name='login'),
     path('cadastro/', cadastro, name='cadastro'),
     path('sams/principal/', sams, name='sams'),
-    path('fort/principal', fort, name='fort'),
+    path('fort/principal/', fort, name='fort'),
     path('cooper/principal/', cooper, name='cooper'),
     path('giassi/principal/', giassi, name='giassi'),
     path('bistek/principal/', bistek, name='bistek'),
@@ -33,6 +33,7 @@ urlpatterns = [
     path('principal/principal/', principal, name='principal'),
     path('principal2/', principal2, name='principal2'),
     path('principal/feijao/', feijao, name='feijao'),
+    path('principal/papel/', papel, name='papel'),
     path('principal/arroz/', arroz, name='arroz'),
     path('principal/macarrao/', macarrao, name='macarrao'),
     path('principal/sal/', sal, name='sal'),
@@ -51,6 +52,7 @@ urlpatterns = [
     path('cooper/farinha/', cooperfarinha, name='cooperfarinha'),
     path('cooper/detergente/', cooperdetergente, name='cooperdetergente'),
     path('cooper/sal/', coopersal, name='coopersal'),
+    path('cooper/cafe/', coopercafe, name='coopercafe'),
 
     #sams
     path('sams/feijao/', samsfeijao, name='samsfeijao'),
@@ -61,6 +63,7 @@ urlpatterns = [
     path('sams/farinha/', samsfarinha, name='samsfarinha'),
     path('sams/detergente/', samsdetergente, name='samsdetergente'),
     path('sams/sal/', samssal, name='samssal'),
+    path('sams/cafe/', samscafe, name='samscafe'),
 
     #fort
     path('fort/feijao/', fortfeijao, name='fortfeijao'),
@@ -71,16 +74,18 @@ urlpatterns = [
     path('fort/farinha/', fortfarinha, name='fortfarinha'),
     path('fort/detergente/', fortdetergente, name='fortdetergente'),
     path('fort/sal/', fortsal, name='fortsal'),
+    path('fort/cafe/', fortcafe, name='fortcafe'),
 
     #giassi
-    path('giassi/feijao/', giassifeijao, name='giassi'),
-    path('giassi/arroz/', giassiarroz, name='giassi'),
-    path('giassi/macarrao/', giassimacarrao, name='giassi'),
-    path('giassi/molho/', giassimolho, name='giassi'),
-    path('giassi/papel/', giassipapel, name='giassi'),
-    path('giassi/farinha/', giassifarinha, name='giassi'),
-    path('giassi/detergente/', giassidetergente, name='giassi'),
-    path('giassi/sal/', giassisal, name='giassi'),
+    path('giassi/feijao/', giassifeijao, name='giassifeijao'),
+    path('giassi/arroz/', giassiarroz, name='giassiarroz'),
+    path('giassi/macarrao/', giassimacarrao, name='giassimacarrao'),
+    path('giassi/molho/', giassimolho, name='giassimolho'),
+    path('giassi/papel/', giassipapel, name='giassipapel'),
+    path('giassi/farinha/', giassifarinha, name='giassifarinha'),
+    path('giassi/detergente/', giassidetergente, name='giassidetergente'),
+    path('giassi/sal/', giassisal, name='giassisal'),
+    path('giassi/cafe/', giassicafe, name='giassicafe'),
 
     #rede
     path('rede/feijao/', redefeijao, name='redefeijao'),
@@ -91,6 +96,7 @@ urlpatterns = [
     path('rede/farinha/', redefarinha, name='redefarinha'),
     path('rede/detergente/', rededetergente, name='rededetergente'),
     path('rede/sal/', redesal, name='redesal'),
+    path('rede/cafe/', redecafe, name='redecafe'),
 
     #atacadao
     path('atacadao/feijao/', atacadaofeijao, name='atacadaofeijao'),
@@ -101,6 +107,7 @@ urlpatterns = [
     path('atacadao/farinha/', atacadaofarinha, name='atacadaofarinha'),
     path('atacadao/detergente/', atacadaodetergente, name='atacadaodetergente'),
     path('atacadao/sal/', atacadaosal, name='atacadaosal'),
+    path('atacadao/cafe/', atacadaocafe, name='atacadaocafe'),
 
     #bistek
     path('bistek/feijao/', bistekfeijao, name='bistekfeijao'),
@@ -111,5 +118,6 @@ urlpatterns = [
     path('bistek/farinha/', bistekfarinha, name='bistekfarinha'),
     path('bistek/detergente/', bistekdetergente, name='bistekdetergente'),
     path('bistek/sal/', bisteksal, name='bisteksal'),
+    path('bistek/cafe/', bistekcafe, name='bistekcafe'),
 
 ]

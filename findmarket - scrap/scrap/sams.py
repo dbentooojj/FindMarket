@@ -11,7 +11,7 @@ from filtros import filtros
 
 def marketSam():
     banco = CRUD()
-    logo = 'https://samsclubqa.vtexassets.com/arquivos/sams-club-logo.png'
+    logo = r'https://raw.githubusercontent.com/dbentooojj/FindMarket/master/findmarket%20-%20django/static/images/SAMSLOGO.png'
     key_words = filtros().key_words
     produtos = ['arroz', 'feijao', 'acucar', 'sal', 'molho de tomate', 'farinha', 'macarrao', 'cafe', 'detergente', 'papel higienico']
     ar = arrow.now().format('DD/MM/YYYY')
