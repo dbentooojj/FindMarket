@@ -162,16 +162,26 @@ def marketCooper():
             # --------------------------------------- INSERÇÃO NO BANCO --------------------------------------- #
 
             for i in range(len(links)):
+                if weight[i] > 0:
+                    price_vol_wei = prices[i] / weight[i]
+                elif bulk[i] > 0:
+                    price_vol_wei = prices[i] / bulk[i]
+                else:
+                    price_vol_wei = 999
+
                 verify_product = True
                 for k in key_words:
                     if k.upper() in str(names[i]).upper():
                         verify_product = False
                 if verify_product:
-                    if weight[i] != 0:
-                        banco.insert_peso(mercadoa, product_category, names[i], weight[i], float(prices[i]), imgs[i], links[i], logo, str(ar))
-                    elif bulk[i] != 0:
-                        banco.insert_volume(mercadoa, product_category, names[i], bulk[i], float(prices[i]), imgs[i], links[i], logo, str(ar))
-                    else:
-                        banco.insert(mercadoa, product_category, names[i], float(prices[i]), imgs[i], links[i], logo, str(ar))
+                    try:
+                        if weight[i] != 0:
+                            banco.insert_peso('Cooper', product_category, names[i], weight[i], float(prices[i]), imgs[i], links[i], logo, str(ar), price_vol_wei)
+                        elif bulk[i] != 0:
+                            banco.insert_volume('Cooper', product_category, names[i], bulk[i], float(prices[i]), imgs[i], links[i], logo, str(ar), price_vol_wei)
+                        else:
+                            banco.insert('Cooper', product_category, names[i], float(prices[i]), imgs[i], links[i], logo, str(ar), price_vol_wei)
+                    except:
+                        pass
             navegador.quit()
     banco.finaliza()

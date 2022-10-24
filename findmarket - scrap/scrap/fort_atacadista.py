@@ -155,6 +155,13 @@ def marketFortAtacadista():
             # --------------------------------------- INSERÇÃO NO BANCO --------------------------------------- #
 
             for i in range(len(links)):
+                if weight[i] > 0:
+                    price_vol_wei = prices[i] / weight[i]
+                elif bulk[i] > 0:
+                    price_vol_wei = prices[i] / bulk[i]
+                else:
+                    price_vol_wei = 999
+
                 verify_product = True
                 for k in key_words:
                     if k.upper() in str(names[i]).upper():
@@ -162,11 +169,11 @@ def marketFortAtacadista():
                 if verify_product:
                     try:
                         if weight[i] != 0:
-                            banco.insert_peso('Fort Atacadista', product_category, names[i], weight[i], float(prices[i]), imgs[i], links[i], logo, str(ar))
+                            banco.insert_peso('Fort Atacadista', product_category, names[i], weight[i], float(prices[i]), imgs[i], links[i], logo, str(ar), price_vol_wei)
                         elif bulk[i] != 0:
-                            banco.insert_volume('Fort Atacadista', product_category, names[i], bulk[i], float(prices[i]), imgs[i], links[i], logo, str(ar))
+                            banco.insert_volume('Fort Atacadista', product_category, names[i], bulk[i], float(prices[i]), imgs[i], links[i], logo, str(ar), price_vol_wei)
                         else:
-                            banco.insert('Fort Atacadista', product_category, names[i], float(prices[i]), imgs[i], links[i], logo, str(ar))
+                            banco.insert('Fort Atacadista', product_category, names[i], float(prices[i]), imgs[i], links[i], logo, str(ar), price_vol_wei)
                     except:
                         pass
 

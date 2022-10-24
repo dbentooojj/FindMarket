@@ -8,22 +8,22 @@ class CRUD:
             database='findmarket',
         )
         self.cursor = self.conexao.cursor()
-    def insert_peso(self, mercado, categoria, nome_produto, peso_produto, preco_produto, imagem_produto, link_produto, link_logo, data_produto):
+    def insert_peso(self, mercado, categoria, nome_produto, peso_produto, preco_produto, imagem_produto, link_produto, link_logo, data_produto, price_vol_wei):
         # CRUD
-        comando = f'INSERT INTO Produtos (mercado, categoria, nome_produto, peso_produto, preco_produto, imagem_produto, link_produto, link_logo, data_produto) VALUES ("{mercado}", "{categoria}", "{nome_produto}", {peso_produto}, {preco_produto}, "{imagem_produto}", "{link_produto}", "{link_logo}", "{data_produto}")'
+        comando = f'INSERT INTO Produtos (mercado, categoria, nome_produto, peso_produto, preco_produto, imagem_produto, link_produto, link_logo, data_produto, price_weight_volume) VALUES ("{mercado}", "{categoria}", "{nome_produto}", {peso_produto}, {preco_produto}, "{imagem_produto}", "{link_produto}", "{link_logo}", "{data_produto}", {price_vol_wei})'
         self.cursor.execute(comando)
         self.conexao.commit() #confirmar edição do banco
         #resultado = self.cursor.fetchall() #ler o banco de dados
     
-    def insert_volume(self, mercado, categoria, nome_produto, volume_produto, preco_produto, imagem_produto, link_produto, link_logo, data_produto):
+    def insert_volume(self, mercado, categoria, nome_produto, volume_produto, preco_produto, imagem_produto, link_produto, link_logo, data_produto, price_vol_wei):
         # CRUD
-        comando = f'INSERT INTO Produtos (mercado, categoria, nome_produto, volume_produto, preco_produto, imagem_produto, link_produto, link_logo, data_produto) VALUES ("{mercado}", "{categoria}", "{nome_produto}", {volume_produto}, {preco_produto}, "{imagem_produto}", "{link_produto}", "{link_logo}", "{data_produto}")'
+        comando = f'INSERT INTO Produtos (mercado, categoria, nome_produto, volume_produto, preco_produto, imagem_produto, link_produto, link_logo, data_produto, price_weight_volume) VALUES ("{mercado}", "{categoria}", "{nome_produto}", {volume_produto}, {preco_produto}, "{imagem_produto}", "{link_produto}", "{link_logo}", "{data_produto}", {price_vol_wei})'
         self.cursor.execute(comando)
         self.conexao.commit()
     
-    def insert(self, mercado, categoria, nome_produto, preco_produto, imagem_produto, link_produto, link_logo, data_produto):
+    def insert(self, mercado, categoria, nome_produto, preco_produto, imagem_produto, link_produto, link_logo, data_produto, price_vol_wei):
         # CRUD
-        comando = f'INSERT INTO Produtos (mercado, categoria, nome_produto, preco_produto, imagem_produto, link_produto, link_logo, data_produto) VALUES ("{mercado}", "{categoria}", "{nome_produto}", {preco_produto}, "{imagem_produto}", "{link_produto}", "{link_logo}", "{data_produto}")'
+        comando = f'INSERT INTO Produtos (mercado, categoria, nome_produto, preco_produto, imagem_produto, link_produto, link_logo, data_produto, price_weight_volume) VALUES ("{mercado}", "{categoria}", "{nome_produto}", {preco_produto}, "{imagem_produto}", "{link_produto}", "{link_logo}", "{data_produto}", {price_vol_wei})'
         self.cursor.execute(comando)
         self.conexao.commit()
     
