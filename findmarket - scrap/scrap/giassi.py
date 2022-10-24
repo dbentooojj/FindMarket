@@ -130,11 +130,12 @@ def marketGiassi():
             imgs.append(href)
 
         for i in range(len(names)):
-            if weight[i] > 0:
-                price_vol_wei = prices[i] / weight[i]
-            elif bulk[i] > 0:
-                price_vol_wei = prices[i] / bulk[i]
-            else:
+            try:
+                if weight[i] > 0:
+                    price_vol_wei = float(prices[i]) / weight[i]
+                elif bulk[i] > 0:
+                    price_vol_wei = float(prices[i]) / bulk[i]
+            except:
                 price_vol_wei = 999
 
             verify_product = True
