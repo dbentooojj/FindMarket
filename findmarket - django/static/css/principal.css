@@ -938,10 +938,12 @@ nav p {
     margin-left: 1rem;
     text-decoration: none;
     height: 18px;
+    cursor: pointer;
+    transition: .3s;
 }
 
 nav p:hover {
-    color: #fff;
+    color: rgb(149, 148, 148);
 }
 
 
