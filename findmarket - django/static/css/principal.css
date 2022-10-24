@@ -532,7 +532,7 @@ root {
     .gridtop { grid-template-columns: repeat(4, 1fr); }
 }  
 
-@media (min-width: 1600px) {
+@media (min-width: 1500px) {
     .gridtop { grid-template-columns: repeat(5, 1fr); }
 }  
 
@@ -622,35 +622,10 @@ root {
         font-size: 1rem;
     }
 
-    #open-modal {
-        display: flex;
-        position: fixed;
-        background-color: white;
-        font-family: "Lato";
-        color: #202a45;
-        border-radius: 0.25rem;
-        height: 2.1rem;
-        width: 4.5rem;
-        top: 1.2em;
-        margin-left: 13rem;
-        margin-top: 0.2rem;
-    }
 
-    #close-modal {
-        background-color: #202a45;
-        font-family: 'Lato';
-        color: white;
-        border-radius: 0.25rem;
-        height: 1.8rem;
-        width: 3.8rem;
-        font-size: 0.8rem;
-    }
+   
 
-    .tituloModal {
-        font-size: 2rem;
-        font-weight: 600;
-    }
-
+ 
 
     #fade {
         position: fixed;
@@ -660,51 +635,6 @@ root {
         height: 100%;
         background-color: rgba(0, 0, 0, 0.6);
         z-index: 5;
-    }
-
-    #modal {
-        height: 30rem;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 500px;
-        max-width: 90%;
-        background-color: #fff;
-        padding: 1.5rem;
-        border-radius: 0.5rem;
-        z-index: 10;
-        overflow: scroll;
-    }
-
-    #fade,
-    #modal {
-        transition: 0.5s;
-        opacity: 1;
-        pointer-events: all;
-    }
-
-    .modal-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #ccc;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-    }
-
-    .modal-body p {
-        margin-bottom: 1rem;
-    }
-
-    #modal.hide,
-    #fade.hide {
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    #modal.hide {
-        top: 0;
     }
 
     .button-filtro {
@@ -738,12 +668,10 @@ root {
         margin-left: 15px;
         margin-bottom: 1.5rem;
         background-color: #202a45;
-        border: none;
         color: #fff;
         font-size: 12px;
         font-weight: 800;
         font-family: 'Lato';
-        border-radius: 20px;
         padding: 5px;
         border: 1px solid #fff;
     }
@@ -867,21 +795,19 @@ root {
     }
 
     .botaoPesquisar {
-        width: 75px;
-        height: 23px;
+        width: 150px;
+        height: 2rem;
         margin-left: 15px;
         margin-bottom: 15px;
         background-color: #fff;
-        border: none;
         color: #202a45;
-        font-size: 11px;
-        font-weight: 800;
+        font-size: 20px;
+        font-weight: 400;
         font-family: 'Lato';
-        border-radius: 20px;
-        padding: 3px;
+        padding: 1px;
         cursor: pointer;
         transition: .6s ease;
-        border: 1px solid #fff;
+        border: 1px solid #202a45;
     }
 
     .barraPesquisa {
@@ -892,21 +818,26 @@ root {
     }
 
     .barraPesquisa input {
-        font-size: 0.9rem;
-        padding-left: 0.5rem;
-        background-color: #142644;
+        font-size: 1.1rem;
+        padding-left: 1.5rem;
+        background-color: #e6e6e7;
+        border: 1px solid #000;
+        color: #202a45;
+        font-weight: 400;
+        
     }
 
     #id_nome_produto {
-        border-radius: 0.5rem;
         border: none;
+        width: 62rem;
+        height: 2rem;
     }
 
     .nav-list {
         list-style: none;
         display: flex;
-        margin-top: 8.5rem;
-        margin-left: 15rem;
+        margin-top: 1rem;
+        margin-left: 62rem;
     }
     
     .nav-list li {
@@ -914,10 +845,6 @@ root {
         margin-left: 3rem;
     }
 
-    .ladoEsquerdo {
-        height: 10rem;
-        width: 27rem;
-    }
 
     .logo_img {
         position: fixed;
@@ -980,7 +907,11 @@ root {
 #menu-btn {
     background-color: #202a45;
     color: #fff;
-    margin-top: 200px;
+    margin-top: 70px;
+    width: 8rem;
+    height: 2rem;
+
+
 }
 
 #menu-btn:focus {
@@ -988,7 +919,7 @@ root {
 }
 
 .btn-menuu {
-    margin-top: 4.5rem!important;
+    margin-top: 6.7!important;
     margin-left: 1.5rem;
 }
 
@@ -1088,7 +1019,6 @@ form button {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
     background-color: #202a45;
     color: #fff;
     font-size: 1rem;
@@ -1102,3 +1032,17 @@ form button:hover {
     border: 1px solid #202a45;
 }
 
+.barraPesquisa {
+    display: flex;
+    margin-top: -32px;
+    margin-left: 10.5rem;
+    left: 0;
+}
+
+.logo {
+    margin-top: -17rem;
+    margin-left: 1rem;
+    left: 0;
+    height: 2rem;
+    max-width: 80%;
+}
