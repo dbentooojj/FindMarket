@@ -27,23 +27,24 @@ FindMarket - Seu amigo todos os dias
                 <ul class="navbar-nav d-flex flex-column mt-5 w-100">
                     <li class="nav-item w-100">
                         <h5>Produtos</h5>
-                        <a href="/giassi/arroz">Arroz</a><br>
-                        <a href="/giassi/feijao">Feijão</a><br>
-                        <a href="/giassi/macarrao">Macarrão</a><br>
-                        <a href="/giassi/sal">Sal</a><br>
-                        <a href="/giassi/molho">Molho de tomate</a><br>
-                        <a href="/giassi/farinha">Farinha de trigo</a><br>
-                        <a href="/giassi/cafe">Café</a><br>
-                        <a href="/giassi/detergente">Detergente</a>
+                        <a href="/feijao/">Feijão</a><br>
+                        <a href="/arroz/">Arroz</a><br>
+                        <a href="/macarrao/">Macarrão</a><br>
+                        <a href="/sal/">Sal</a><br>
+                        <a href="/molho/">Molho de tomate</a><br>
+                        <a href="/farinha/">Farinha de trigo</a><br>
+                        <a href="/cafe/">Café</a><br>
+                        <a href="/detergente/">Detergente</a>
                         <hr>
                         <h5>Mercados</h5>
                         <a href="/principal/">Todos</a>
                         <a href="/cooper/">Cooper</a><br>
-                        <a href="/rede/">Rede Top</a><br>
                         <a href="/atacadao/">Atacadão</a><br>
+                        <a href="/rede/">Rede Top</a><br>
+                        <a href="/giassi/">Giasse</a><br>
                         <a href="/fort/">Fort Atacadista</a><br>
-                        <a href="/bistek">Bistek</a><br>
-                        <a href="/sams/">Sam`s Club</a>
+                        <a href="/bistek/">Bistek</a><br>
+                        <a href="/sams/">Sam`s Market</a>
                         <hr>
                     </li>
             
@@ -104,6 +105,25 @@ FindMarket - Seu amigo todos os dias
 
 </section>
 
+<div id="modal-promocao" class="modal-container">
+    <div class="modal">
+        <h3>Seleciona um mercado.</h3>
+        <form action="GET">
+            <div class="form-group">
+                <select class="form-control" id="mercado">
+                    <option>Cooper</option>
+                    <option>Atacadão</option>
+                    <option>Rede Top</option>
+                    <option>Giassi</option>
+                    <option>Fort Atacadista</option>
+                    <option>Bistek</option>
+                    <option>Sam`s Market</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</div>
 
 <!-- bootstrap js -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

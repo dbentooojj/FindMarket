@@ -850,7 +850,7 @@ def mergeDictionary(dict_1, dict_2):
 mercados = []
 
 def principal(request):
-    produtos_list = Produtos.objects.all().order_by('preco_produto')
+    produtos_list = Produtos.objects.all().order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
@@ -859,9 +859,19 @@ def principal(request):
 
     return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
+def principal2(request):
+    produtos_list = Produtos.objects.all().order_by('price_weight_volume')
+    meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
+    produtos_list = meu_filtro.qs
+    paginator = Paginator(produtos_list, 12)
+    page = request.GET.get('page')
+    produtos = paginator.get_page(page)
+
+    return render(request, 'principal2.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
+
 
 def feijao(request):
-    produtos_list = Produtos.objects.all().filter(categoria='feijao').order_by('preco_produto')
+    produtos_list = Produtos.objects.all().filter(categoria='feijao').order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
@@ -872,7 +882,7 @@ def feijao(request):
 
 
 def arroz(request):
-    produtos_list = Produtos.objects.all().filter(categoria='arroz').order_by('preco_produto')
+    produtos_list = Produtos.objects.all().filter(categoria='arroz').order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
@@ -883,7 +893,7 @@ def arroz(request):
 
 
 def macarrao(request):
-    produtos_list = Produtos.objects.all().filter(categoria='macarrao').order_by('preco_produto')
+    produtos_list = Produtos.objects.all().filter(categoria='macarrao').order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
@@ -894,7 +904,7 @@ def macarrao(request):
 
 
 def sal(request):
-    produtos_list = Produtos.objects.all().filter(categoria='sal').order_by('preco_produto')
+    produtos_list = Produtos.objects.all().filter(categoria='sal').order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
@@ -905,7 +915,7 @@ def sal(request):
 
 
 def molho_tomate(request):
-    produtos_list = Produtos.objects.all().filter(categoria='molho de tomate').order_by('preco_produto')
+    produtos_list = Produtos.objects.all().filter(categoria='molho de tomate').order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
@@ -917,7 +927,7 @@ def molho_tomate(request):
 
 
 def farinha_trigo(request):
-    produtos_list = produtos_list.filter(categoria='farinha').order_by('preco_produto')
+    produtos_list = produtos_list.filter(categoria='farinha').order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
@@ -927,7 +937,7 @@ def farinha_trigo(request):
     return render(request, 'principal.html', {'produtos': produtos, 'meu_filtro': meu_filtro})
 
 def cafe(request):
-    produtos_list = Produtos.objects.all().filter(categoria='cafe').order_by('preco_produto')
+    produtos_list = Produtos.objects.all().filter(categoria='cafe').order_by('price_weight_volume')
     meu_filtro = ProductFilter(request.GET, queryset=produtos_list)
     produtos_list = meu_filtro.qs
     paginator = Paginator(produtos_list, 12)
@@ -951,7 +961,7 @@ def contato(request):
 
 def mercado(request):
     mercados = {'mercado': 'Bistek', 'mercado': 'Fort Atacadista'}
-    produtos_list = Produtos.objects.all().filter(**mercados)
+    produtos_list = Produtos.objects.all().filter(**mercados).order_by('price_weight_volume')
     paginator = Paginator(produtos_list, 12)
     page = request.GET.get('page')
     produtos = paginator.get_page(page)

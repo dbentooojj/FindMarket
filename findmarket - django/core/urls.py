@@ -1,7 +1,7 @@
 # criando as paginas do site (urls - views(o que vai acontecer) - templates(visual do site)))
 
 from django.urls import path, include
-from .views import homepage, login, cadastro, endereco, principal, feijao, arroz, macarrao, sal, molho_tomate, farinha_trigo, cafe, detergente, contato, sams, bistek, atacadao, rede, giassi, cooper, fort
+from .views import homepage, login, cadastro, endereco, principal, principal2, feijao, arroz, macarrao, sal, molho_tomate, farinha_trigo, cafe, detergente, contato, sams, bistek, atacadao, rede, giassi, cooper, fort
 
 #cooper
 from .views import cooperfeijao, cooperarroz, coopermacarrao, coopermolho, cooperpapel, cooperfarinha, cooperdetergente, coopersal
@@ -31,6 +31,7 @@ urlpatterns = [
     path('atacadao/', atacadao, name='atacadao'),
     path('endereco/', endereco, name='endereco'),
     path('principal/', principal, name='principal'),
+    path('principal2/', principal2, name='principal2'),
     path('feijao/', feijao, name='feijao'),
     path('arroz/', arroz, name='arroz'),
     path('macarrao/', macarrao, name='macarrao'),
